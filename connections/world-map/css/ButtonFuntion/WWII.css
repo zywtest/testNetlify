@@ -1,0 +1,60 @@
+g.usa, g.suriname {
+  fill: blue;
+}
+/* British Empire */
+g.canada, g.belize, g.bahama, g.jamaica, g.dominica, g.stlucia, g.stvincent, g.grenada, g.trinidad,
+g.guyana,
+g.uk, g.cyprus,
+g.gambia, g.sierraleone, g.ghana, g.nigeria, g.namibia, g.botswana, g.safrica, g.lesotho, g.swaziland, g.zimbabwe, g.zambia, g.malawi, g.tanzania, g.kenya, g.uganda, g.sudan, g.south_sudan, g.egypt, g.somalia
+g.jordan, g.israel, g.iraq, g.uae, g.oman, g.yemen,
+g.pakistan, g.india, g.maldives, g.srilanka, g.bangladesh,
+g.solomon, g.newzealand, g.australia, g.fiji  {
+  fill: blue;
+}
+path[id="falklands west"], path[id="falklands east"] {
+  fill: blue;
+}
+
+/* previous France Empire Colony*/
+g.chad, g.centrafrique, g.syria{
+  fill: blue;
+}
+path#greenland, path#spitsbergen, path#nordaustlandet, path#edgeoya, path[id="new caledonia"] {
+  fill: blue;
+}
+/* other countries joined the ally*/
+g.iceland, g.drc, g.eritrea, g.ethiopia, g.jordan, g.iran, g.nepal, g.bhutan, g.vanuatu {
+  fill: blue;
+}
+
+/* Soviet Union*/
+g.soviet, g.mongolia {
+  fill:red;
+}
+
+
+
+
+
+g.germany, g.austria, g.albania, g.hungary, g.bulgaria, g.moldova, g.poland, g.belarus, g.estonia, g.latvia, g.lithuania,
+g.denmark, g.norway, g.finland, g.austra, g.yugoslavia, g.greece, g.romania, g.czech, g.slovakia, g.ukraine,
+/* the france*/
+g.france,
+g.algeria, g.tunisia, g.mauretania, g.senegal, g.guniee, g.ivoire, g.burkina, g.goto, g.benin, g.niger, g.cameroon, g.gabon, g.congo, g.madagascar, g.mauritius, g.seychelles,
+
+
+g.japan, g.skorea, g.nkorea, g.vietnam, g.cambodia, g.laos, g.thailand, g.burma, g.philippines, g.brunei, g.malaysia, g.indonesia {
+  fill: black;
+}
+path#taiwan, path#iturup, path#urup, path#onekotan, path#paramushir {
+  fill: black;
+}
+
+g.italy, g.mali, g.guniee {
+  fill: black;
+}
+
+
+g.china, g.papuanewguinea, path#sakhalin {
+  fill: yellow;
+}

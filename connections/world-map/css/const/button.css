@@ -1,0 +1,43 @@
+button {
+  height: inherit;
+  width: 200px;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.button-set {
+  padding: 0 10px;
+  height: 60px;
+}
+
+.red {
+  min-width: 300px;
+  background: linear-gradient(to right,darkred 0%,red 25%,darkorange 50%,lightcoral 100%);
+  color: blue;
+  height: 20px;
+  text-align: center;
+}
+
+.blue {
+  min-width: 300px;
+  background: linear-gradient(to right,darkblue 0%,blue 25%,lightblue 50%, green 100%);
+  color: red;
+  height: 20px;
+  text-align: center;
+}
+
+.yellow {
+  min-width: 300px;
+  background: yellow;
+  color: firebrick;
+  height: 20px;
+  text-align: center;
+}
+
+.black {
+  min-width: 300px;
+  background: white;
+  color: black;
+  height: 20px;
+  text-align: center;
+}

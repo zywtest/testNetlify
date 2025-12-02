@@ -1,0 +1,190 @@
+div:is(#card-ops-filter, #card-side-filter, #card-stage-filter) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+div:is(#card-side-filter, #card-stage-filter) {
+  margin-bottom: 12.5px;
+}
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter):first-child {
+  margin-left: auto;
+  margin-right: 0;
+}
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter):nth-child(2) {
+  margin: 0 auto;
+}
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter):last-child {
+  margin-left: 0;
+  margin-right: auto;
+}
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter) {
+  display: inline-block;
+  border: var(--no-effect) solid 1px;
+  background: white;
+  border-radius: 4px;
+  text-align: center;
+  overflow: auto;
+}
+
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter) > label > input {
+  position: absolute;
+  top: -20px;
+  display: none;
+}
+div:is(#card-side-filter > div.side-filter, #card-stage-filter > div.stage-filter) > label > span {
+  text-align: center;
+  padding: 0px 0px;
+  display: block;
+  border-top: solid #dddddd 4px;
+  font-size: 14px;
+  width: 96px;
+}
+
+div#card-side-filter > div.side-filter input#filter-US:checked + span {
+  border-top: solid var(--US) 4px;
+}
+div#card-side-filter > div.side-filter input#filter-Neutral:checked + span {
+  border-top: solid var(--Netural) 4px;
+}
+div#card-side-filter > div.side-filter input#filter-USSR:checked + span {
+  border-top: solid var(--USSR) 4px;
+}
+div#card-stage-filter > div.stage-filter input#filter-Early:checked + span {
+  border-top: solid var(--early-war) 4px;
+}
+div#card-stage-filter > div.stage-filter input#filter-Mid:checked + span {
+  border-top: solid var(--mid-war) 4px;
+}
+div#card-stage-filter > div.stage-filter input#filter-Late:checked + span {
+  border-top: solid var(--late-war) 4px;
+}
+
+div#card-ops-filter {
+  margin-top: 12.5px;
+}
+div#card-ops-filter > i {
+  border: 0;
+  font-size: 40px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+div#card-ops-filter > i.selected {
+  color: var(--darkviolet);
+}
+
+/** ------------------------------------------------------------------------------
+ * Main Card Piles
+ * ------------------------------------------------------------------------------*/
+div#main {
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+  width: fit-content;
+}
+
+div#main > div {
+  display: flex;
+  flex-direction: column;
+}
+
+div > h2 {
+  color: var(--blueviolet);
+  margin: auto;
+}
+
+div.left {
+  width: 470px;
+  min-height: 175px;
+  margin-right: 25px;
+}
+div.right {
+  width: 470px;
+  min-height: 175px;
+  margin-left: 25px;
+}
+
+div.pool {
+  border: 1ch solid var(--green);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: -webkit-fill-available;
+  overflow-y: scroll;
+  height: 565px;
+}
+
+body[accessKey = "early"] div.pool {
+  border-color: var(--early-war);
+}
+
+body[accessKey = "mid"] div.pool {
+  border-color: var(--mid-war);
+}
+
+body[accessKey = "late"] div.pool {
+  border-color: var(--late-war);
+}
+
+div[id = "draw-pool"] {
+  width: 695px;
+}
+
+div.pool > img {
+  /* display: flex; */
+  width: 125px;
+  height: 175px;
+  margin-left: 5px;
+  margin-top: 5px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+body.zoom div.pool > img {
+  /* display: flex; */
+  width: 200px;
+  height: 280px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+div[id = "draw-pool"] > img:is(.ops-filter, .side-filter, .stage-filter) {
+  display: none !important;
+}
+
+/** ------------------------------------------------------------------------------
+ * Bottom Buttons
+ * ------------------------------------------------------------------------------*/
+
+div#options {
+  width: 695px;
+  margin: 0 478px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+div#options > h2 {
+  color: var(--darkyellow);
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+div#options > div.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div#options > div.button-container > div{
+  display: flex;
+  flex: 1;
+}
+
+div > button.button {
+  margin: 0 auto;
+}
+
+button.button.hide {
+  display: none;
+}

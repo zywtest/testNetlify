@@ -1,0 +1,10 @@
+g.armenia, g.azerbaijan, g.belarus, g.kazakhstan, g.kirgizstan, g.moldova, g.russia, g.tajikistan, g.uzbekistan {
+  fill: blue;
+}
+g.turkmenistan {
+  fill: royalblue;
+}
+
+g.georgia, g.ukraine {
+  fill: darkred;
+}

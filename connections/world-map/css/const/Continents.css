@@ -1,0 +1,31 @@
+g.Africa {
+  fill: burlywood;
+}
+/* empty zone*/
+g.Antarctica {
+  fill: white;
+}
+
+g.Asia {
+  fill: chocolate;
+}
+
+g.Europe {
+  fill: thistle;
+}
+
+g.MiddleEast {
+  fill: gray;
+}
+
+g.NorthAmerica {
+  fill: bisque;
+}
+
+g.Oceania {
+  fill: olivedrab;
+}
+
+g.SouthAmerica {
+  fill: #b09874;
+}

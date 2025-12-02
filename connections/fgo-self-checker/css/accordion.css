@@ -1,0 +1,30 @@
+/* c */
+.accordion-container {
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  line-height: 32px;
+  font-size: large;
+  justify-content: space-between;
+  padding: 10px solid #000;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px 0 rgba(78, 77, 77, 1);
+}
+.accordion-mainTitle {
+  margin: 0 auto;
+}
+.accordion-container.hide {
+  color: #fff;
+  background: lightseagreen;
+}
+
+.hide + * {
+  display: none !important;
+}
+
+.show + *{
+  display: normal !important;
+  margin-top: 10px !important;
+}

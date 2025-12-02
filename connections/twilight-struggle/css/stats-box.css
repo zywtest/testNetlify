@@ -1,0 +1,65 @@
+g.VP-stats > g > rect.cover-VP-rect,
+g.VP-stats > g > g > rect.cover-VP-rect {
+  height: 30px;
+  width: 30px;
+  fill:  grey;
+  stroke-width: 3;
+  stroke: rgb(0,0,0);
+}
+
+g.VP-stats > g.zero > rect.cover-VP-rect {
+  height: 70px;
+  width: 70px;
+}
+
+g.VP-stats > g.US-side-container > g.current > rect.cover-VP-rect.US-side {
+  fill: blue;
+  stroke: cyan;
+}
+g.VP-stats > g.US-side-container > g.current ~ g > rect.cover-VP-rect.US-side {
+  fill: cyan;
+  stroke: lightblue;
+}
+
+g.VP-stats > g.CCP-side-container > g.current > rect.cover-VP-rect.CCP-side {
+  fill: darkred;
+  stroke: deeppink;
+}
+g.VP-stats > g.CCP-side-container > g.current ~ g > rect.cover-VP-rect.CCP-side {
+  fill: deeppink;
+  stroke: pink;
+}
+
+g.VP-stats > g.zero.current > rect.cover-VP-rect {
+  fill: white;
+  stroke: black;
+}
+
+g.VP-stats > g > g.current > text {
+  fill:white;
+}
+g.VP-stats > g.zero.current > text {
+  fill:black;
+}
+
+g[class $= '-stats'] {
+  transform: scale(0.67);
+}
+
+text.VP-point {
+  fill: black;
+  font-weight: 800;
+}
+
+text[class $= "VP-label"] {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+text.US-VP-label {
+  fill: darkblue;
+}
+
+text.CN-VP-label {
+  fill: darkred;
+}

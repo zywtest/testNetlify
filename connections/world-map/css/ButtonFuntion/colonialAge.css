@@ -1,0 +1,24 @@
+g.canada, g.belize, g.bahama, g.jamaica, g.dominica, g.stlucia, g.stvincent, g.grenada, g.trinidad,
+g.guyana,
+g.uk, g.ireland, g.cyprus,
+g.gambia, g.sierraleone, g.ghana, g.nigeria, g.namibia, g.botswana, g.safrica, g.lesotho, g.swaziland, g.zimbabwe, g.zambia, g.malawi, g.tanzania, g.kenya, g.uganda, g.sudan, g.south_sudan, g.egypt,
+g.jordan, g.israel, g.iraq, g.uae, g.oman, g.yemen,
+g.pakistan, g.india, g.maldives, g.srilanka, g.bangladesh, g.burma, g.malaysia,
+g.papuanewguinea, g.solomon, g.newzealand, g.australia, g.fiji  {
+  fill: darkred;
+}
+
+path#somaliland {
+  fill: maroon;
+}
+
+g.france,
+g.algeria, g.tunisia, g.chad, g.mauretania, g.senegal, g.guniee, g.ivoire, g.burkina, g.goto, g.benin, g.niger, g.cameroon ,g.centrafrique, g.gabon, g.congo, g.madagascar, g.mauritius, g.seychelles,
+g.syria,
+g.vietnam {
+  fill: darkblue;
+}
+
+g.vanuatu {
+  fill: yellow;
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="cn-zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no;user-scalable=0;"/>
+    <title>Simulate Access Code ScreenShot</title>
+    <script src="./js/lib/html2canvas.js"></script>
+    <script src="./js/lib/dom-to-image.js"></script>
+    <script src="./js/CommonFunction.js"></script>
+    <script src="./js/date_time.js"></script>
+    <script src="./js/rail_train_logic.js"></script>
+    <script src="./js/setIn.js"></script>
+    <link rel="stylesheet" href="./css/generate.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/info-top.css" type="text/css">
+    <link rel="stylesheet" href="./css/info-bot.css" type="text/css">
+    <script>
+      function test () {
+        var node = document.getElementById('result-photo');
+
+        domtoimage.toBlob(node)
+        .then(function (blob) {
+            window.saveAs(blob, 'my-node.png');
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="input-page">
+      <div id="fast-generate-part-container">
+        <div class="container-title" onclick="hideThis(this)">信息快速生成</div>
+        <div id="fast-generate-part-main">
+          <div class="read-first-memo">
+            在本模式中。您只需要输入目标地点的场所名以及所属地区即可。<br/>
+            余下部分将按照以下规则随机生成。<br/>
+          </div>
+          <div class="read-first-memo-append">
+            系统时间：当前时间<br/>
+            场所名：空白<br/>
+            登记时间：当前时间<br/>
+            地区名：辽宁省大连市沙河口区<br/>
+            姓名：任意<br/>
+            身份证号：任意<br/>
+            核酸采样时间：前日的工作时间<br/>
+            核酸检测结果时间：昨日的任意时间<br/>
+          </div>
+          <label class="place-name-holder">
+            输入场所名称:
+            <input id="fast-generate-place-name" type="text" name="fa-generate-place" />
+          </label>
+          <label class="zone-name-holder">
+            选择场所所在的区域:
+            <input id="fast-generate-zone-name" list="fa-generate-zone-list" type="text" name="fa-generate-zone" />
+            <datalist id="fa-generate-zone-list">
+              <option value="辽宁省大连市沙河口区">
+              <option value="辽宁省大连市中山区">
+              <option value="辽宁省大连市西岗区">
+              <option value="辽宁省大连市高新区">
+              <option value="辽宁省大连市旅顺口区">
+              <option value="辽宁省大连市甘井子区">
+              <option value="辽宁省大连市金普新区">
+            </datalist>
+          </label>
+        </div>
+        <div class="generate-button-container">
+          <button id="fa-generate-button" onclick="faGenerate()" role="button">生成图片</button>
+        </div>
+      </div>
+      <div id="rail-train-generate-part-container">
+        <div class="container-title hide" onclick="hideThis(this)">信息快速生成(地铁)</div>
+        <div id="rail-train-generate-part-main">
+          <div class="read-first-memo">
+            在本模式中。您只需要选择地铁站即可<br/>
+            余下部分将按照以下规则随机生成。<br/>
+          </div>
+          <div class="read-first-memo-append">
+            系统时间：当前时间<br/>
+            场所名：空白<br/>
+            登记时间：当前时间<br/>
+            地区名：辽宁省大连市沙河口区<br/>
+            姓名：任意<br/>
+            身份证号：任意<br/>
+            核酸采样时间：前日的工作时间<br/>
+            核酸检测结果时间：昨日的任意时间<br/>
+          </div>
+          <div class="flex-row space-between" style="justify-content: center;">
+          </div>
+          <label class="flex-row place-name-holder">
+            <div class="flex-column">
+              <p>选择入站/出站码:</p>
+              <p>选择地铁线路:</p>
+              <p>选择地铁站口:</p>
+            </div>
+            <div class="flex-column">
+              <div class="flex-row align-center" style="min-height: 3rem;">
+                <input type="radio" id="get-in-stop-list" name="rail-mode-radio-button" value="in" checked="true">
+                <label for="get-in-stop-list">入站使用</label>
+                <input type="radio" id="get-out-stop-list" name="rail-mode-radio-button" value="out">
+                <label for="get-out-stop-list">出站使用</label>
+              </div>
+              <select id="rail-train-route-select" name="rail-train-route-select" data-chosen="1" onchange=" this.dataset.chosen = this.value; ">
+                <option value="1">地铁1号线</option>
+                <option value="2">地铁2号线</option>
+                <option value="12">地铁12号线</option>
+              </select>
+              <input id="rail-train-route-1-input" list="rail-train-1-stop-list" type="text" name="rail-train-route-1" />
+              <input id="rail-train-route-2-input" list="rail-train-2-stop-list" type="text" name="rail-train-route-2" />
+              <input id="rail-train-route-12-input" list="rail-train-12-stop-list" type="text" name="rail-train-route-12" />
+              <datalist id="rail-train-1-stop-list">
+                <option value="大连北站"></option>
+                <option value="华北路"></option>
+                <option value="华南北"></option>
+                <option value="华南广场"></option>
+                <option value="千山路"></option>
+                <option value="松江路"></option>
+                <option value="东纬路"></option>
+                <option value="春柳"></option>
+                <option value="香工街"></option>
+                <option value="中长街"></option>
+                <option value="兴工街"></option>
+                <option value="西安路"></option>
+                <option value="富国街"></option>
+                <option value="会展中心"></option>
+                <option value="星海广场"></option>
+                <option value="黑石礁"></option>
+                <option value="学苑广场"></option>
+                <option value="海事大学"></option>
+                <option value="七贤岭"></option>
+                <option value="河口"></option>
+              </datalist>
+              <datalist id="rail-train-2-stop-list">
+                <option value="大连北站"></option>
+                <option value="南关岭"></option>
+                <option value="体育中心"></option>
+                <option value="卫生中心"></option>
+                <option value="后革"></option>
+                <option value="革镇堡"></option>
+                <option value="中革"></option>
+                <option value="前革"></option>
+                <option value="辛寨子"></option>
+                <option value="机场"></option>
+                <option value="虹港路"></option>
+                <option value="红旗西路"></option>
+                <option value="湾家"></option>
+                <option value="马栏广场"></option>
+                <option value="辽师大"></option>
+                <option value="交通大学"></option>
+                <option value="西安路"></option>
+                <option value="联合路"></option>
+                <option value="人民广场"></option>
+                <option value="一二九街"></option>
+                <option value="青泥洼桥"></option>
+                <option value="友好广场"></option>
+                <option value="中山广场"></option>
+                <option value="港湾广场"></option>
+                <option value="会议中心"></option>
+                <option value="东港"></option>
+                <option value="东海"></option>
+                <option value="海之韵"></option>
+              </datalist>
+              <datalist id="rail-train-12-stop-list">
+                <option value="河口"></option>
+                <option value="蔡大岭"></option>
+                <option value="黄泥川"></option>
+                <option value="龙王塘"></option>
+                <option value="塔河湾"></option>
+                <option value="旅顺"></option>
+                <option value="铁山"></option>
+                <option value="春柳"></option>
+                <option value="旅顺新港"></option>
+              </datalist>
+            </div>
+          </label>
+        </div>
+        <div class="generate-button-container">
+          <button id="fa-generate-button" onclick="raGenerate()" role="button">生成图片</button>
+        </div>
+      </div>
+      <div id="detail-generate-part-container">
+        <div class="container-title hide" onclick="hideThis(this)">信息详细生成</div>
+        <div id="detail-generate-part-main">
+          <div class="read-first-memo">
+            在本模式中。您可以最大程度填入页面需要的所有信息<br/>
+            空白的部分将按照以下规则随机生成。<br/>
+          </div>
+          <div class="read-first-memo-append">
+            系统时间：当前时间<br/>
+            场所名：空白<br/>
+            登记时间：当前时间<br/>
+            地区名：辽宁省大连市沙河口区<br/>
+            姓名：任意<br/>
+            身份证号：任意<br/>
+            核酸采样时间：前日的工作时间<br/>
+            核酸检测结果时间：昨日的任意时间<br/>
+          </div>
+          <label class="place-name-holder">
+            输入IOS显示的当前时间:
+            <input id="detail-generate-current-time" type="time" name="detail-generate-current-time" />
+          </label>
+          <label class="place-name-holder">
+            输入场所名称:
+            <input id="detail-generate-place-name" type="text" name="detail-generate-place-name" />
+          </label>
+          <label class="register-time-holder">
+            登记时间:<input id="detail-generate-register-date-time" type="datetime-local" name="detail-generate-register-date-time" />
+          </label>
+          <label class="zone-name-holder">
+            选择场所所在的区域:
+            <input id="detail-generate-zone-name" list="fa-generate-zone-list" type="text" name="detail-generate-zone" />
+          </label>
+          <label class="owner-name-holder">
+            输入您的名称:
+            <input id="detail-generate-owner-name" type="text" name="detail-generate-owner-name" placeholder="张三"/>
+          </label>
+          <label class="flex-column owner-id-holder">
+            <div class="flex-row">输入您的身份证号码:</div>
+            <div class="flex-row">前四位：<input id="detail-generate-owner-id-pre" type="text" name="detail-generate-owner-id-pre"  placeholder="2102" pattern="[0-9]{4}" maxlength="4" size="4"/></div>
+            <div class="flex-row">后四位：<input id="detail-generate-owner-id-post" type="text" name="detail-generate-owner-id-post"  placeholder="590X" pattern="[0-9]{3}([0-9]|X)" maxlength="4" size="4"/></div>
+          </label>
+          <label class="sampling-time-holder">
+            核酸采样时间:<input id="detail-generate-sampling-date-time" type="datetime-local" name="detail-generate-sampling-date-time" />
+          </label>
+          <label class="test-result-time-holder">
+            核酸检测结果时间:<input id="detail-generate-result-date-time" type="datetime-local" name="detail-generate-result-date-time" />
+          </label>
+        </div>
+        <div class="generate-button-container">
+          <button id="detail-generate-button" onclick="deGenerate()" role="button">生成图片</button>
+        </div>
+      </div>
+    </div>
+    <div id="result-photo" style="width: 390px; height: 844px; display: none;">
+      <div id="cover-top"></div>
+      <div id="cover-top-time"></div>
+      <div id="fixed-bar"></div>
+      <div id="main-info-top-container">
+        <div id="main-info-top">
+          <div class="flex-column" style="flex: 1.75;">
+            <div class="flex-row">
+              <div id="register-building"></div>
+            </div>
+            <div class="flex-row">
+              <div class="img-container">
+                <img src="./source/calendar.png" width="15">
+              </div>
+              <div id="register-time"></div>
+            </div>
+            <div class="flex-row">
+              <div class="img-container">
+                <img src="./source/location.png" width="15">
+              </div>
+              <div id="register-area">辽宁省大连市沙河口区</div>
+            </div>
+          </div>
+          <div class="flex-column" style="flex: 1; align-items: center;">
+            <div id="register-mark">登记成功</div>
+          </div>
+        </div>
+      </div>
+      <div id="main-info-bot-container">
+        <div id="main-info-bot">
+          <div id="owner-container" class="flex-row underline">
+            <div id="owner-icon">
+              <img src="./source/icon-male.png" width="50">
+            </div>
+            <div id="owner-info" class="flex-column">
+              <div id="owner-name"></div>
+              <div id="owner-id"></div>
+            </div>
+          </div>
+          <div id="access-condition-container">
+            <img src="./source/access.png" width="130">
+          </div>
+          <div id="route-card-container" class="flex-row underline space-between">
+            <div id="route-card-placeholder">国务院行程卡</div>
+            <div id="route-card-jump-button">点击查询</div>
+          </div>
+          <div id="sampling-time-container" class="flex-row underline space-between">
+            <div id="covid-sampling-time-placeholder">大连核酸采样时间</div>
+            <div id="covid-sampling-time-input-value"></div>
+          </div>
+          <div id="test-result-container" class="flex-column">
+            <div class="flex-row space-between" style="margin: 1rem 0">
+              <div id="test-result-placeholder">大连市核酸检测结果</div>
+              <div id="test-result-jump-button">
+                全国数据库
+                <img src="./source/arrow.png" width="15">
+              </div>
+            </div>
+            <div class="flex-row space-between" style="margin-bottom: 1rem">
+              <div id="test-result-icon">
+                <img src="./source/negative.png" width="25" style="margin-right: 0.5rem;">
+                阴性
+              </div>
+              <div id="test-result-time-value"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer-assign">
+        <div class="flex-row">技术支持 | 辽宁省卫生健康服务中心</div>
+      </div>
+    </div>
+    <!-- <div id="result-dialog" style="width: 390px; height: 844px; display: none;">
+      <div class="result-inner-container">
+        <div class="flex-row space-between" style="height: 2rem;">
+          <button onclick="closeDialog()" role="button">返回输入界面</button>
+        </div>
+        <img id="outputImg" src="" alt="The generated image" width="390" height="844"/>
+      </div>
+    </div> -->
+  </body>
+</html>

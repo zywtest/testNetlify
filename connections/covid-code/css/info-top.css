@@ -1,0 +1,89 @@
+#main-info-top-container {
+  position: relative;
+  z-index: 12;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid var(--top-bot-container-border-color);
+  background: white;
+  margin-top: -50px;
+  margin-bottom: 10px;
+}
+
+#main-info-top {
+  margin: 22px 8px 0 32px;
+  display: flex;
+}
+
+#main-info-top > .flex-column > .flex-row ~ .flex-row {
+  margin-top: 1rem;
+}
+#main-info-top > .flex-column > .flex-row:last-child {
+  margin-bottom: 1rem;
+}
+
+#register-building {
+  font-size: 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  min-height: 2rem;
+  line-height: 1.8rem;
+}
+
+#register-mark {
+  --register-border-color: #A4E5B5;
+  --register-background-color: #F4FCF6;
+  --register-mark-color: #74D584;
+  --register-font-color: #5AC55A;
+  color: var(--register-font-color);
+  border-radius: 30px;
+  border: 1px solid var(--register-border-color);
+  background-color: var(--register-background-color);
+  font-size: 14px;
+  display: flex;
+  width: 90px;
+  justify-items: right;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: flex-end;
+  align-items: center;
+  font-weight: 500;
+  height: 24px;
+}
+
+#register-mark::before {
+  content: '✓';
+  color: var(--register-mark-color);
+  border-radius: 50%;
+  border: 3px solid var(--register-mark-color);
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: bolder;
+}
+
+#calendar {
+  background-image: url(../source/calendar.png);
+  width: 15px;
+  height: 17.5px;
+  background-repeat: round;
+}
+#register-time {
+  display: flex;
+  flex: 9;
+}
+
+#location {
+  background-image: url(../source/location.png);
+  width: 15px;
+  height: 19px;
+  background-repeat: round;
+}

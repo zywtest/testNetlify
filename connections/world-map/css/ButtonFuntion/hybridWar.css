@@ -1,0 +1,57 @@
+/* NATO 29 + 1 */
+/* g.belgium, g.canada, g.denmark, g.france, g.germany, g.iceland, g.italy, g.netherlands, g.norway, g.portugal, g.uk, g.greece, g.turkey, g.spain,
+g.albania, g.bulgaria, g.czech, g.hungary, g.poland, g.romania, g.slovakia,
+g.estonia, g.latvia, g.lithuania,
+g.croatia, g.montenegro, g.macedonia, g.slovenia {
+  fill: blue;
+} */
+g.canada, g.norway, g.uk, g.turkey,
+g.albania,
+g.montenegro, g.macedonia {
+  fill: blue;
+}
+g.usa {
+  fill: darkblue;
+}
+
+/* EU 27 */
+g.germany, g.netherlands, g.belgium, g.france, g.italy,
+g.denmark, g.ireland,
+g.greece, g.spain, g.portugal,
+g.sweden, g.finland, g.austria,
+g.cyprus, g.estonia, g.latvia, g.lithuania, g.poland, g.czech, g.slovakia, g.slovenia, g.hungary, g.malta,
+g.bulgaria, g.romania,
+g.croatia {
+  fill: green;
+}
+
+/* Neutral country */
+g.switzerland, g.sweden, g.finland, g.austria, g.cyprus, g.malta, g.ireland, g.turkmenistan, g.costarica, g.panama {
+  fill: white;
+}
+
+g.japan, g.skorea, g.israel, g.saudi, g.mexico, g.morocoo, g.indonesia, g.brazil, g.australia, g.newzealand, g.safrica, g.georgia  {
+  fill: royalblue;
+}
+
+g.russia {
+  fill: yellow;
+}
+g.china {
+  fill: darkred;
+}
+g.belarus, g.nkorea {
+  fill: purple;
+}
+
+g.iran, g.cuba {
+  fill: red;
+}
+/* middle country */
+g.algeria, g.angola, g.bolivia, g.cambodia, g.eritrea, g.laos, g.nicaragua, g.palestine, g.syria, g.venezuela, g.nicaragua, g.stvincent {
+  fill: crimson;
+}
+
+g.ukraine, path#taiwan , g.iraq, g.libya {
+  fill: black;
+}

@@ -1,0 +1,26 @@
+i {
+  border: 0;
+  font-size: 20px;
+  cursor: normal;
+  padding-right: 10px;
+}
+
+i.fas.fa-user {
+  font-size: 16px;
+}
+
+i.self {
+  color: blue;
+}
+
+i.ally {
+  color: green;
+}
+
+i.special-ally {
+  color: purple;
+}
+
+i.enemy {
+  color: red;
+}

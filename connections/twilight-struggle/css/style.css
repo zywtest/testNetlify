@@ -1,0 +1,17 @@
+html {
+  background:lightseagreen;
+}
+
+body.stop-scrolling {
+  overflow: -Scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#mapwrapper {
+  width: 100%;
+}
+
+svg {
+  transform: scale(1);
+}

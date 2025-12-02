@@ -1,0 +1,82 @@
+text {
+  cursor: default;
+}
+
+text.super-power-label {
+  font: 600 2rem arial;
+  text-anchor: middle;
+  fill: black;
+}
+
+g[class ^= 'influence-box-'] {
+  transform: scale(0.67);
+}
+
+g[class ^= 'influence-box-'] > rect {
+  width: 25;
+  height: 25;
+  stroke-width: 3;
+  stroke: rgb(0,0,0);
+}
+g[class ^= 'influence-box-'] > rect.info-box-background {
+  width: 50;
+  height: 40;
+}
+g[class ^= 'influence-box-'] > text {
+  font: 600 0.4rem arial;
+  text-anchor: middle;
+  fill: black;
+}
+
+g[class ^= 'influence-box-'] > text.influence-box-value {
+  font-size: 0.8rem;
+  cursor: default;
+}
+
+g[class ^= 'influence-box-'] > rect.controll-point-background {
+  width: 15;
+  height: 15;
+  fill: yellow;
+}
+g[class ^= 'influence-box-'] > text.controll-point {
+  font-size: 0.6rem;
+}
+
+g[class ^= 'influence-box-'] > rect.controll-point-background.battleFieldCountry {
+  fill: brown;
+}
+g[class ^= 'influence-box-'] > rect.controll-point-background.battleFieldCountry + text.controll-point {
+  fill: white;
+}
+
+g[class $= '-africa'] > rect {
+  fill: #D19D57;
+}
+
+g[class $= '-asia'] > rect {
+  fill: #E8935A;
+}
+
+g[class $= '-south-asia'] > rect {
+  fill: #F0B994;
+}
+
+g[class $= '-europe'] > rect {
+  fill: #D8BFD8;
+}
+
+g[class $= '-middleEast'] > rect {
+  fill: #ADD8E6;
+}
+
+g[class $= '-northAmerica'] > rect {
+  fill: #FFD7A7;
+}
+
+g[class $= '-southAmerica'] > rect {
+  fill: #B09874;;
+}
+
+g[class $= '-oceania'] > rect {
+  fill: #A8D450;
+}

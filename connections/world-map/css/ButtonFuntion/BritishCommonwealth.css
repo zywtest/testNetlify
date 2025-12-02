@@ -1,0 +1,9 @@
+g.australia, g.bahama, g.bangladesh, g.belize, g.botswana, g.brunei, g.cameroon, g.canada, g.cyprus, g.dominica, g.swaziland, g.fiji, g.gambia, g.ghana, g.grenada, g.guyana,
+g.india, g.jamacia, g.kenya, g.lesotho, g.malawi, g.malaysia, g.maldives, g.malta, g.mauritius, g.mozambique, g.namibia, g.newzealand, g.nigeria, g.pakistan, g.papuanewguinea,
+g.rwanda, g.stlucia, g.stvincent, g.seychelles, g.sierraleone, g.singapore, g.solomon, g.safrica, g.srilanka, g.tanzania, g.trinidad, g.uganda, g.uk, g.vanuatu, g.zambia{
+  fill: blue;
+}
+
+g.zimbabwe, g.ireland {
+  fill: darkred;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1">
+    <title>Twilight Struggle Card Checker</title>
+    <link href="./source/me.ico" rel="icon" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/addition/RainbowEffect.css">
+    <link rel="stylesheet" type="text/css" href="./css/addition/swal-addition-css.css">
+    <link rel="stylesheet" type="text/css" href="./css/lib/FontAwesome/css/all.css">
+
+    <script src="./js/common.js"></script>
+    <script src="./js/DB.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/option.js"></script>
+    <script src="./js/lib/angular/angular.js"></script>
+    <script src="./js/lib/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <div class="title-group">
+          <div class="twi">
+            <h1 class="selectDisable">T</h1>
+          </div>
+          <div class="str">
+            <h1 class="selectDisable">S</h1>
+          </div>
+        </div>
+        <div class="cc">
+          <h1 class="selectDisable rainbowtext-animated">Card Checker</h1>
+        </div>
+      </div>
+      <div class="icon-container">
+        <i class="fab fa-canadian-maple-leaf"
+          onclick="goBackToHomepage();"
+          title="Go back to the Author's homepage"
+          style="color: red;">
+        </i>
+        <i class="fas fa-info-square"
+          onclick="showInstructions();"
+          title="Instruction of this small webpage"
+          style="color: black">
+        </i>
+        <i class="fas fa-question-circle"
+          onclick="showFunctuonDescription();"
+          title="Q & A about the functions"
+          style="color: purple">
+        </i>
+        <i class="fas fa-search-plus"
+           onclick="ZoomUp();" id="zoomUp"
+           title="Zoom Up all card pictures"
+           style="color: gold">
+        </i>
+        <i class="fas fa-search-minus hide"
+           onclick="ZoomDown();" id="zoomDown"
+           title="Zoom Down all card pictures"
+           style="color: gray">
+        </i>
+        <a href="mailto:zy874129@dal.ca">
+          <i class="fas fa-inbox" title="Send bugs/feedback to the Author"></i>
+        </a>
+      </div>
+    </header>
+    <div id="main">
+      <div class="left">
+        <h2 class="selectDisable">Remove Pile</h2>
+        <div id="remove-pool" class="pool" ondrop="dropToRemove(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="centeral">
+        <h2 class="selectDisable">Draw Pile</h2>
+        <h2 class="selectDisable" id="counter"></h2>
+        <div id="card-stage-filter">
+          <div class="stage-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-Early" name="filter-stage" onchange="stageFilter('early', this)">
+              <span title="filter early war cards">Early War</span>
+            </label>
+          </div>
+          <div class="stage-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-Mid" name="filter-stage" onchange="stageFilter('mid', this)">
+              <span title="filter mid war cards">Mid War</span>
+            </label>
+          </div>
+          <div class="stage-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-Late" name="filter-stage" onchange="stageFilter('late', this)">
+              <span title="filter late war cards">Late War</span>
+            </label>
+          </div>
+        </div>
+        <div id="card-side-filter">
+          <div class="side-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-US" name="filter-side" onchange="sideFilter('US', this)">
+              <span title="filter USA cards">U.S.A.</span>
+            </label>
+          </div>
+          <div class="side-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-Neutral" name="filter-side" onchange="sideFilter('-', this)">
+              <span title="filter neutral cards">Neutral</span>
+            </label>
+          </div>
+          <div class="side-filter">
+            <label style="padding-left:0;">
+              <input type="checkbox" checked id="filter-USSR" name="filter-side" onchange="sideFilter('USSR', this)">
+              <span title="filter USSR cards">U.S.S.R.</span>
+            </label>
+          </div>
+        </div>
+        <div id="card-ops-filter">
+          <i class="fas fa-square selected" title="filter 0 Ops cards"
+             onclick="opsFilter(0, this)">
+          </i>
+          <i class="fas fa-dice-one selected" title="filter 1 Ops cards"
+             onclick="opsFilter(1, this)">
+          </i>
+          <i class="fas fa-dice-two selected" title="filter 2 Ops cards"
+             onclick="opsFilter(2, this)">
+          </i>
+          <i class="fas fa-dice-three selected" title="filter 3 Ops cards"
+             onclick="opsFilter(3, this)">
+          </i>
+          <i class="fas fa-dice-four selected" title="filter 4 Ops cards"
+             onclick="opsFilter(4, this)">
+          </i>
+        </div>
+        <div id="draw-pool" class="pool" ondrop="dropToDraw(event)" ondragover="allowDrop(event)"></div>
+      </div>
+      <div class="right">
+        <h2 class="selectDisable">Discard Pile</h2>
+        <div id="discard-pool" class="pool" ondrop="dropToDiscard(event)" ondragover="allowDrop(event)"></div>
+      </div>
+    </div>
+    <div id="options">
+      <h2 class="selectDisable">Card Options</h2>
+      <div class="button-container">
+        <div>
+          <button id="Shuffle" class="button selectDisable"
+                  onclick="shuffle();"
+                  title="return cards from discard to draw pile">
+            SHUFFLE THE DECK
+          </button>
+        </div>
+        <div>
+          <button id="MidWar" class="button selectDisable"
+                  onclick="addMidWarCards();disableThis(this);setVisibleButtons(2);"
+                  title="add mid war cards to draw pile">
+            ADD MID WAR
+          </button>
+        </div>
+        <div>
+          <button id="LateWar" class="button selectDisable"
+                  onclick="addLateWarCards();disableThis(this);"
+                  title="add late war cards to draw pile">
+            ADD LATE WAR
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

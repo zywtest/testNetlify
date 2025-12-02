@@ -1,0 +1,24 @@
+g.belgium, g.canada, g.denmark, g.france, g.iceland, g.italy, g.netherlands, g.norway, g.portugal, g.uk{
+  fill: blue;
+}
+g.greece, g.turkey {
+  fill: rgb(23, 68, 194);
+}
+g.spain {
+  fill: lightblue;
+}
+g.usa {
+  fill: darkblue;
+}
+
+g.albania, g.bulgaria, g.czech, g.hungary, g.poland, g.romania, g.slovakia {
+  fill: red;
+}
+
+g.soviet {
+  fill: darkred;
+}
+
+g.germany {
+  fill: yellow;
+}

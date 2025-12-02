@@ -1,0 +1,118 @@
+#main-info-bot-container {
+  position: relative;
+  z-index: 12;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid var(--top-bot-container-border-color);
+  background: white;
+  margin-top: 0;
+  --bot-gray-font-color: #666666;
+}
+
+#main-info-bot {
+  margin: 22px 32px 0 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+#owner-container {
+  display: flex;
+  flex-direction: row;
+  height: 2rem;
+  align-items: center;
+}
+#male {
+  background-image: url(../source/icon-male.png);
+  background-repeat: round;
+  width: 51px;
+  height: 46px;
+}
+#owner-name {
+  font-weight: bold;
+}
+#owner-id {
+  margin-top: 0.5rem;
+  color: var(--bot-gray-font-color);
+}
+
+#access-condition-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+}
+#access {
+  background-image: url(../source/access.png);
+  width: 130px;
+  height: 138px;
+  background-repeat: round;
+}
+
+#route-card-container {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem auto;
+  align-items: center;
+}
+
+#route-card-jump-button {
+  --jump-button-blue: #4583DA;
+  border: 1px solid var(--jump-button-blue);
+  color: var(--jump-button-blue);
+  border-radius: 3px;
+  padding: 6px 15px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#covid-sampling-time-placeholder {
+
+}
+
+#covid-sampling-time-input-value {
+  font-size: 14px;
+  color: var(--bot-gray-font-color);
+}
+
+#test-result-placeholder {
+
+}
+
+#test-result-jump-button {
+  --this-border-color: #DDDDDD;
+  font-size: 12px;
+  padding: 4px 8px;
+  border: 1px solid var(--this-border-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 3px;
+}
+#arrow {
+  background-image: url(../source/arrow.png);
+  width: 15px;
+  height: 15px;
+  background-repeat: round;
+}
+
+#test-result-icon {
+  --negative-green-color: #5AC55A;
+  font-weight: bold;
+  color: var(--negative-green-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#test-result-icon > #negative {
+  background-image: url(../source/negative.png);
+  width: 25px;
+  height: 50px;
+  background-repeat: round;
+  margin-right: 0.5rem;
+}
+
+#test-result-time-value {
+  font-size: 14px;
+  color: var(--bot-gray-font-color);
+}

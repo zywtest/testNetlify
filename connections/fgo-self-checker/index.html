@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1">
+    <title>F</title>
+    <script src="./AppConstructor.js"></script>
+    <link href="./source/me.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body ng-app="">
+    <div class="servant-info-container" id="servant-info-container">
+      <div class="accordion-container servant-info-accordion hide">
+        <div lang="zh-CN" class="accordion-mainTitle">信息</div>
+      </div>
+      <div class="servant-info">
+        <div class="servant-name special" id="servantName">
+          <div class="servant-name-left">
+            <span class="servant-no"></span>
+          </div>
+          <div class="servant-name-middle">
+            <img  class="rare-level" src="empty"/>
+            <img  class="class-picture" src="empty"/>
+            <span lang="zh-CN" class="servant-name-placeholder-CN" style="font-weight: 700;"></span>
+            <span lang="ja" class="servant-name-placeholder-JP" style="font-weight: 700;"></span>
+          </div>
+          <div class="servant-name-right">
+            <span class="get-type"></span>
+          </div>
+        </div>
+        <div class="top-content">
+          <div class="flex-left">
+            <img src="source/test.png" alt="sample" class="character-picture"/>
+            <div class="sairin-states">
+              <i class="fas fa-caret-left" id="sairin-left"></i>
+              <select name="sairin-state" id="sairin-value">
+                <option value=1>第1阶段</option>
+                <option value=2>第2阶段</option>
+                <option value=3>第3阶段</option>
+                <option value=4>第4阶段</option>
+              </select>
+              <i class="fas fa-caret-right" id="sairin-right"></i>
+            </div>
+          </div>
+          <div class="flex-right data-side">
+            <div class="line-one-topic">
+              <div class="character-painter-title">
+                <span lang="zh-CN" class="servant-content">画师</span>
+              </div>
+              <div class="character-voicer-title">
+                <span lang="zh-CN" class="servant-content">声优</span>
+              </div>
+            </div>
+            <div class="line-one-content">
+              <div><span lang="zh-CN" class="servant-content character-painter"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-voicer"></span></div>
+            </div>
+            <div class="line-two-topic">
+              <div class="character-sexual-title">
+                <span lang="zh-CN" class="servant-content">性别</span>
+              </div>
+              <div class="character-class-title">
+                <span lang="zh-CN" class="servant-content">职阶</span>
+              </div>
+              <div class="character-class-title">
+                <span lang="zh-CN" class="servant-content">身高</span>
+              </div>
+              <div class="character-class-title">
+                <span lang="zh-CN" class="servant-content">体重</span>
+              </div>
+              <div class="character-attributes-title flex-2">
+                <span lang="zh-CN" class="servant-content">属性</span>
+              </div>
+            </div>
+            <div class="line-two-content">
+              <div><span lang="zh-CN" class="servant-content character-sexual"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-class"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-height"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-weight"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-attributes"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-attributes-others"></span></div>
+            </div>
+            <div class="line-three-topic">
+              <div class="character-strength-title">
+                <span lang="zh-CN" class="servant-content">筋力</span>
+              </div>
+              <div class="character-stamina-title">
+                <span lang="zh-CN" class="servant-content">耐久</span>
+              </div>
+              <div class="character-agile-title">
+                <span lang="zh-CN" class="servant-content">敏捷</span>
+              </div>
+              <div class="character-magic-title">
+                <span lang="zh-CN" class="servant-content">魔力</span>
+              </div>
+              <div class="character-fortune-title">
+                <span lang="zh-CN" class="servant-content">幸运</span>
+              </div>
+              <div class="character-phantasm-title">
+                <span lang="zh-CN" class="servant-content">宝具</span>
+              </div>
+            </div>
+            <div class="line-three-content">
+              <div><span lang="zh-CN" class="servant-content character-strength"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-stamina"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-agile"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-magic"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-fortune"></span></div>
+              <div><span lang="zh-CN" class="servant-content character-phantasm"></span></div>
+            </div>
+            <div class="line-four">
+              <div lang="zh-CN" class="command-cards-title">指令卡</div>
+              <div class="command-cards flex-2">
+                <div class="command-cards-inner-container">
+                  <img src="source/me.jpg" alt="card1" class="command-cards-img card1" />
+                  <img src="source/me.jpg" alt="card2" class="command-cards-img card2" />
+                  <img src="source/me.jpg" alt="card3" class="command-cards-img card3" />
+                  <img src="source/me.jpg" alt="card4" class="command-cards-img card4" />
+                  <img src="source/me.jpg" alt="card5" class="command-cards-img card5" />
+                </div>
+              </div>
+            </div>
+            <div class="line-five">
+              <div lang="zh-CN" class="hit-info-title">Hit数</div>
+            </div>
+            <div class="hits-lists">
+              <div lang="zh-CN" class="quick-hits-title">Quick</div>
+              <div lang="zh-CN" class="flex-2"><span class="servant-content quick-hits-values"></span></div>
+            </div>
+            <div class="hits-lists">
+              <div lang="zh-CN" class="arts-hits-title">Arts</div>
+              <div lang="zh-CN" class="flex-2"><span class="servant-content arts-hits-values"></span></div>
+            </div>
+            <div class="hits-lists">
+              <div lang="zh-CN" class="buster-hits-title">buster</div>
+              <div lang="zh-CN" class="flex-2"><span class="servant-content buster-hits-values"></span></div>
+            </div>
+            <div class="hits-lists">
+              <div lang="zh-CN" class="extra-hits-title">Extra</div>
+              <div lang="zh-CN" class="flex-2"><span class="servant-content extra-hits-values"></span></div>
+            </div>
+            <div class="hits-lists">
+              <div lang="zh-CN" class="phantasm-hits-title">宝具</div>
+              <div lang="zh-CN" class="flex-2"><span class="servant-content phantasm-hits-values"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="middle-content">
+          <div class="line-six">
+            <div lang="zh-CN" class="NP-rate-title special">NP获取率</div>
+          </div>
+          <div class="line-six-topic">
+            <div class="Quick-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">Quick</span>
+            </div>
+            <div class="Arts-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">Arts</span>
+            </div>
+            <div class="buster-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">buster</span>
+            </div>
+            <div class="Extra-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">Extra</span>
+            </div>
+            <div class="Phantasm-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">宝具</span>
+            </div>
+            <div class="Injure-NP-rate-title">
+              <span lang="zh-CN" class="servant-content">受击</span>
+            </div>
+          </div>
+          <div class="line-six-content">
+            <div><span lang="zh-CN" class="servant-content Quick-NP-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content Arts-NP-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content buster-NP-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content Extra-NP-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content Phantasm-NP-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content Injure-NP-rate"></span></div>
+          </div>
+          <div class="line-seven-topic">
+            <div class="star-rate-title">
+              <span lang="zh-CN" class="servant-content">出星率</span>
+            </div>
+            <div class="inflict-death-rate-title">
+              <span lang="zh-CN" class="servant-content">被即死率</span>
+            </div>
+            <div class="star-gather-rate-title">
+              <span lang="zh-CN" class="servant-content">暴击权重</span>
+            </div>
+          </div>
+          <div class="line-seven-content">
+            <div><span lang="zh-CN" class="servant-content star-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content inflict-death-rate"></span></div>
+            <div><span lang="zh-CN" class="servant-content star-gather-rate"></span></div>
+          </div>
+          <div class="line-eight-topic">
+            <div lang="zh-CN" class="special-attributes-title special">特性</div>
+          </div>
+          <div class="line-eight-content">
+            <div lang="zh-CN" class="special-attributes-container"></div>
+          </div>
+          <div class="line-nine-topic">
+            <div lang="zh-CN" class="is-human-title"><span class="servant-content">人型</span></div>
+            <div lang="zh-CN" class="is-againsted-by-EA-title flex-2"><span class="servant-content">被「天地乖离开辟之星」特攻</span></div>
+          </div>
+          <div class="line-nine-content">
+            <div><span lang="zh-CN" class="servant-content is-human"></span></div>
+            <div class="flex-2"><span lang="zh-CN" class="servant-content is-againsted-by-EA"></span></div>
+          </div>
+        </div>
+        <!-- Phantasm & Skills -->
+        <div class="bottom-content">
+          <div class="phantasm-topic">
+            <div lang="zh-CN" class="phantasm-title">宝具</div>
+          </div>
+          <nav class="phantasn-upper-bar-container"><div lang="zh-CN" class="phantasm-upper-bar"></div></nav>
+          <div class="phantasm-content">
+            <div class="demonstrating-icon phantasm-icon quick" id="phantasm-icon-container">
+              <img src="source/me.jpg" alt="phantasm" id="phantasm-icon"/>
+            </div>
+            <div class="phantasm-name-placeholder flex-5">
+              <div class="phantasm-name-placeholder-CN-title">
+                <span lang="zh-CN" class="phantasm-name-placeholder-CN-upper"></span>
+                <span lang="zh-CN" class="phantasm-name-placeholder-CN" ></span>
+              </div>
+              <div class="phantasm-name-placeholder-JP-title">
+                <span lang="ja" class="phantasm-name-placeholder-JP-upper"></span>
+                <span lang="ja" class="phantasm-name-placeholder-JP"></span>
+              </div>
+            </div>
+          </div>
+          <div class="phantasm-content-1">
+            <div class=""><span lang="zh-CN" class="phantasm-level"></span></div>
+            <div class="flex-5"><span lang="zh-CN" class="phantasm-type"></span></div>
+          </div>
+          <div class="phantasm-content-2"></div>
+          <!-- Skills -->
+          <div class="skill-topic"><div lang="zh-CN" class="skill-title">技能</div></div>
+          <!-- Skill 1 -->
+          <nav class="skill-1-upper-bar-container"><div lang="zh-CN" class="skill-1-upper-bar"></div></nav>
+          <div class="skill-1-content">
+            <div class="demonstrating-icon skill-1-icon">
+              <img src="source/me.jpg" alt="skill-1" id="skill-1-icon"/>
+            </div>
+            <div class="skill-1-name-placeholder flex-3">
+              <span lang="zh-CN" class="skill-1-name-placeholder-CN"></span>
+              <span lang="ja" class="skill-1-name-placeholder-JP"></span>
+            </div>
+            <div class="flex-2">
+              <span lang="zh-CN" class="skill-1-charge-time-placeholder"></span>
+            </div>
+          </div>
+          <div class="skill-1-content-2"></div>
+          <!-- Skill 2 -->
+          <nav class="skill-2-upper-bar-container"><div lang="zh-CN" class="skill-2-upper-bar"></div></nav>
+          <div class="skill-2-content">
+            <div class="demonstrating-icon skill-2-icon">
+              <img src="source/me.jpg" alt="skill-2" id="skill-2-icon"/>
+            </div>
+            <div class="skill-2-name-placeholder flex-3">
+              <span lang="zh-CN" class="skill-2-name-placeholder-CN"></span>
+              <span lang="ja" class="skill-2-name-placeholder-JP"></span>
+            </div>
+            <div class="flex-2">
+              <span lang="zh-CN" class="skill-2-charge-time-placeholder"></span>
+            </div>
+          </div>
+          <div class="skill-2-content-2"></div>
+          <!-- Skill 3 -->
+          <nav class="skill-3-upper-bar-container"><div lang="zh-CN" class="skill-3-upper-bar"></div></nav>
+          <div class="skill-3-content">
+            <div class="demonstrating-icon skill-3-icon">
+              <img src="source/me.jpg" alt="skill-3" id="skill-3-icon"/>
+            </div>
+            <div class="skill-3-name-placeholder flex-3">
+              <span lang="zh-CN" class="skill-3-name-placeholder-CN"></span>
+              <span lang="ja" class="skill-3-name-placeholder-JP"></span>
+            </div>
+            <div class="flex-2">
+              <span lang="zh-CN" class="skill-3-charge-time-placeholder"></span>
+            </div>
+          </div>
+          <div class="skill-3-content-2"></div>
+          <!-- Passive Skills -->
+          <div class="passive-skill-topic"><div lang="zh-CN" class="passive-skill-title">职阶技能</div></div>
+          <div class="passive-skill-container"></div>
+          <!-- Appended Skills -->
+          <div class="appended-skill-topic"><div lang="zh-CN" class="appended-skill-title">附加技能</div></div>
+          <div class="appended-skill-1-content">
+            <div class="demonstrating-icon appended-skill-icon">
+              <img src="./source/skillIcon/64px-特攻.png" alt="appended-skill-1" id="appended-skill-1-icon"/>
+            </div>
+            <div class="passive-skill-description-container flex-5">
+              <div class="appended-skill-1-name-placeholder">
+                <span lang="zh-CN" class="appended-skill-1-name-placeholder-CN">追击技巧提升</span>
+                <span lang="ja" class="appended-skill-1-name-placeholder-JP">追撃技巧向上</span>
+              </div>
+              <div class="appended-skill-1-description-container">
+                <span lang="zh-CN" class="appended-skill-1-description">自身的Extra Attack指令卡性能提升</span>
+                <div class="appended-skill-data-table">
+                  <span class="fixed-value-span">30%</span>
+                  <span class="fixed-value-span">32%</span>
+                  <span class="fixed-value-span">34%</span>
+                  <span class="fixed-value-span">36%</span>
+                  <span class="fixed-value-span">38%</span>
+                  <span class="fixed-value-span">40%</span>
+                  <span class="fixed-value-span">42%</span>
+                  <span class="fixed-value-span">44%</span>
+                  <span class="fixed-value-span">46%</span>
+                  <span class="fixed-value-span">50%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appended-skill-2-content">
+            <div class="demonstrating-icon appended-skill-icon">
+              <img src="./source/skillIcon/64px-充能.png" alt="appended-skill-2" id="appended-skill-2-icon"/>
+            </div>
+            <div class="passive-skill-description-container flex-5">
+              <div class="appended-skill-2-name-placeholder">
+                <span lang="zh-CN" class="appended-skill-2-name-placeholder-CN">魔力装填</span>
+                <span lang="ja" class="appended-skill-2-name-placeholder-JP">魔力装填</span>
+              </div>
+              <div class="appended-skill-2-description-container">
+                <span lang="zh-CN" class="appended-skill-2-description">自身以NP已达一定数值的状态开始战斗</span>
+                <div class="appended-skill-data-table">
+                  <span class="fixed-value-span">10%</span>
+                  <span class="fixed-value-span">11%</span>
+                  <span class="fixed-value-span">12%</span>
+                  <span class="fixed-value-span">13%</span>
+                  <span class="fixed-value-span">14%</span>
+                  <span class="fixed-value-span">15%</span>
+                  <span class="fixed-value-span">16%</span>
+                  <span class="fixed-value-span">17%</span>
+                  <span class="fixed-value-span">18%</span>
+                  <span class="fixed-value-span">20%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="appended-skill-3-content">
+            <div class="demonstrating-icon appended-skill-icon">
+              <img src="./source/skillIcon/64px-加攻.png" alt="appended-skill-3" id="appended-skill-3-icon"/>
+            </div>
+            <div class="passive-skill-description-container flex-5">
+              <div class="appended-skill-3-name-placeholder">
+                <span lang="zh-CN" class="appended-skill-3-name-placeholder-CN"></span>
+                <span lang="ja" class="appended-skill-3-name-placeholder-JP"></span>
+              </div>
+              <div class="appended-skill-3-description-container">
+                <span lang="zh-CN" class="appended-skill-3-description"></span>
+                <div class="appended-skill-data-table">
+                  <span class="fixed-value-span">20%</span>
+                  <span class="fixed-value-span">21%</span>
+                  <span class="fixed-value-span">22%</span>
+                  <span class="fixed-value-span">23%</span>
+                  <span class="fixed-value-span">24%</span>
+                  <span class="fixed-value-span">25%</span>
+                  <span class="fixed-value-span">26%</span>
+                  <span class="fixed-value-span">27%</span>
+                  <span class="fixed-value-span">28%</span>
+                  <span class="fixed-value-span">30%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="search-condition-container">
+      <div class="accordion-container hide" onclick="hideThisContainer(this)">
+        <div class="accordion-mainTitle search-condition-accordion">特性检索</div>
+      </div>
+      <div class="search-condition-box-container">
+        <div class="attack-type-container">
+          <div class="attack-type-title">
+            <img src="source/effectIcon/64px-攻击力提升状态.png" alt="ATK_UP" class="checkbox-icon">
+            <span class="search-bar-topic">攻击力类</span>
+          </div>
+        </div>
+        <div class="attack-type-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="attackType1">
+              <label class="checkbox-label" for="attackType1">自身的攻击力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="attackType2">
+              <label class="checkbox-label" for="attackType2">己方单体的攻击力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="attackType3">
+              <label class="checkbox-label" for="attackType3">己方全体的攻击力提升</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="defense-type-container">
+          <div class="defense-type-title">
+            <img src="source/effectIcon/" alt="DEF_DOWN" class="checkbox-icon">
+            <img src="source/effectIcon/64px-无视防御状态.png" alt="DEF_IGNORE" class="checkbox-icon">
+            <span class="search-bar-topic">防御类</span>
+          </div>
+        </div>
+        <div class="defense-type-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="defenseType1">
+              <label class="checkbox-label" for="defenseType1">敌方单体的防御力降低</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="defenseType2">
+              <label class="checkbox-label" for="defenseType2">敌方全体的防御力降低</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="defenseType3">
+              <label class="checkbox-label" for="defenseType3">自身防御力无视状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="defenseType4">
+              <label class="checkbox-label" for="defenseType4">己方单体防御力无视状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="defenseType5">
+              <label class="checkbox-label" for="defenseType5">己方全体防御力无视状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="sidestep-type-container">
+          <div class="sidestep-type-title">
+            <img src="source/skillIcon/64px-回避.png" alt="SIDESTEP" class="checkbox-icon">
+            <img src="source/skillIcon/64px-必中.png" alt="SIDESTEP_IGNORE" class="checkbox-icon">
+            <span class="search-bar-topic">闪避类</span>
+          </div>
+        </div>
+        <div class="sidestep-type-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType1">
+              <label class="checkbox-label" for="sidestepType1">自身闪避状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType2">
+              <label class="checkbox-label" for="sidestepType2">己方单体闪避状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType3">
+              <label class="checkbox-label" for="sidestepType3">己方全体闪避状态</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType4">
+              <label class="checkbox-label" for="sidestepType4">自身必中状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType5">
+              <label class="checkbox-label" for="sidestepType5">己方单体必中状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="sidestepType6">
+              <label class="checkbox-label" for="sidestepType6">己方全体必中状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="invincible-type-container">
+          <div class="invincible-type-title">
+            <img src="source/skillIcon/64px-无敌状态.png" alt="INVINCIBLE" class="checkbox-icon">
+            <img src="source/effectIcon/64px-无敌贯通状态.png" alt="INVINCIBLE_IGNORE" class="checkbox-icon">
+            <span class="search-bar-topic">无敌类</span>
+          </div>
+        </div>
+        <div class="invincible-type-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType1">
+              <label class="checkbox-label" for="invincibleType1">自身无敌状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType2">
+              <label class="checkbox-label" for="invincibleType2">己方单体无敌状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType3">
+              <label class="checkbox-label" for="invincibleType3">己方全体无敌状态</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType4">
+              <label class="checkbox-label" for="invincibleType4">自身无敌贯通状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType5">
+              <label class="checkbox-label" for="invincibleType5">己方单体无敌贯通状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="invincibleType6">
+              <label class="checkbox-label" for="invincibleType6">己方全体无敌贯通状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="create-star-type-container">
+          <div class="create-star-type-title">
+            <img src="source/skillIcon/64px-出星.png" alt="CREATE_STAR" class="checkbox-icon">
+            <img src="source/skillIcon/64px-回合出星.png" alt="CREATE_STAR_END_TURN" class="checkbox-icon">
+            <span class="search-bar-topic">出星类</span>
+          </div>
+        </div>
+        <div class="create-star-type-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="createStarType1">
+              <label class="checkbox-label" for="createStarType1">产生暴击星</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="createStarType2">
+              <label class="checkbox-label" for="createStarType2">自身回合结束时产生暴击星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="createStarType3">
+              <label class="checkbox-label" for="attackType3">己方单体回合结束时产生暴击星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="createStarType4">
+              <label class="checkbox-label" for="attackType4">己方全体回合结束时产生暴击星</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="star-drop-type-container">
+          <div class="star-drop-type-title">
+            <img src="source/skillIcon/64px-掉星率增加.png" alt="STAR_DROP" class="checkbox-icon">
+            <span class="search-bar-topic">掉星率增加类</span>
+          </div>
+        </div>
+        <div class="star-drop-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starDropType1">
+              <label class="checkbox-label" for="starDropType1">自身掉星率增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starDropType2">
+              <label class="checkbox-label" for="starDropType2">己方单体掉星率增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starDropType3">
+              <label class="checkbox-label" for="starDropType3">己方全体掉星率增加</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="star-gather-type-container">
+          <div class="star-gather-type-title">
+            <img src="source/skillIcon/64px-集星.png" alt="STAR_GATHER" class="checkbox-icon">
+            <img src="source/skillIcon/64px-反集星.png" alt="STAR_ANTI_GATHER" class="checkbox-icon">
+            <img src="source/skillIcon/64px-绿卡集星.png" alt="QUICK_STAR_GATHER" class="checkbox-icon">
+            <img src="source/skillIcon/64px-红卡集星.png" alt="ARTS_STAR_GATHER" class="checkbox-icon">
+            <img src="source/skillIcon/64px-蓝卡集星.png" alt="buster_STAR_GATHER" class="checkbox-icon">
+            <span class="search-bar-topic">集星类</span>
+          </div>
+        </div>
+        <div class="star-gather-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType1">
+              <label class="checkbox-label" for="starGatherType1">自身集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType2">
+              <label class="checkbox-label" for="starGatherType2">己方单体集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType3">
+              <label class="checkbox-label" for="starGatherType3">己方全体集星</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType4">
+              <label class="checkbox-label" for="starGatherType4">自身反集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType5">
+              <label class="checkbox-label" for="starGatherType5">己方单体反集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType6">
+              <label class="checkbox-label" for="starGatherType6">己方全体反集星</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType7">
+              <label class="checkbox-label" for="starGatherType7">自身绿卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType8">
+              <label class="checkbox-label" for="starGatherType8">己方单体绿卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType9">
+              <label class="checkbox-label" for="starGatherType9">己方全体绿卡集星</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType10">
+              <label class="checkbox-label" for="starGatherType11">自身蓝卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType11">
+              <label class="checkbox-label" for="starGatherType12">己方单体蓝卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType12">
+              <label class="checkbox-label" for="starGatherType13">己方全体蓝卡集星</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType13">
+              <label class="checkbox-label" for="starGatherType13">自身红卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType14">
+              <label class="checkbox-label" for="starGatherType14">己方单体红卡集星</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="starGatherType15">
+              <label class="checkbox-label" for="starGatherType15">己方全体红卡集星</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="critical-type-container">
+          <div class="critical-type-title">
+            <img src="source/effectIcon/64px-暴击率提升状态.png" alt="CRITICAL" class="checkbox-icon">
+            <span class="search-bar-topic">暴击类</span>
+          </div>
+        </div>
+        <div class="critical-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="criticalType1">
+              <label class="checkbox-label" for="criticalType1">自身暴击威力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="criticalType2">
+              <label class="checkbox-label" for="criticalType2">己方单体暴击威力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="criticalType3">
+              <label class="checkbox-label" for="criticalType3">己方全体暴击威力提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="criticalType4">
+              <label class="checkbox-label" for="criticalType5">敌方单体被暴击耐性降低</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="criticalType5">
+              <label class="checkbox-label" for="criticalType5">敌方全体被暴击耐性降低</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="quick-type-container">
+          <div class="quick-type-title">
+            <img src="source/effectIcon/64px-Quick卡性能提升状态.png" alt="QUICK" class="checkbox-icon">
+            <img src="source/effectIcon/64px-Quick卡耐性下降状态.png" alt="QUICK" class="checkbox-icon">
+            <span class="search-bar-topic">Quick性能类</span>
+          </div>
+        </div>
+        <div class="quick-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="quickType1">
+              <label class="checkbox-label" for="quickType1">自身绿卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="quickType2">
+              <label class="checkbox-label" for="quickType2">己方单体绿卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="quickType3">
+              <label class="checkbox-label" for="quickType3">己方全体绿卡性能提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="quickType4">
+              <label class="checkbox-label" for="quickType4">敌方单体绿卡耐性下降</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="quickType5">
+              <label class="checkbox-label" for="quickType5">敌方全体绿卡耐性下降</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="arts-type-container">
+          <div class="arts-type-title">
+            <img src="source/effectIcon/64px-Arts卡性能提升状态.png" alt="ARTS" class="checkbox-icon">
+            <img src="source/effectIcon/64px-Arts卡耐性下降状态.png" alt="ARTS" class="checkbox-icon">
+            <span class="search-bar-topic">Arts性能类</span>
+          </div>
+        </div>
+        <div class="arts-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="artsType1">
+              <label class="checkbox-label" for="artsType1">自身蓝卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="artsType2">
+              <label class="checkbox-label" for="artsType2">己方单体蓝卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="artsType3">
+              <label class="checkbox-label" for="artsType3">己方全体蓝卡性能提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="artsType4">
+              <label class="checkbox-label" for="artsType4">敌方单体蓝卡耐性下降</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="artsType5">
+              <label class="checkbox-label" for="artsType5">敌方全体蓝卡耐性下降</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="buster-type-container">
+          <div class="buster-type-title">
+            <img src="source/effectIcon/64px-Buster卡性能提升状态.png" alt="buster" class="checkbox-icon">
+            <img src="source/effectIcon/64px-Buster卡耐性下降状态.png" alt="buster" class="checkbox-icon">
+            <span class="search-bar-topic">buster性能类</span>
+          </div>
+        </div>
+        <div class="buster-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="busterType1">
+              <label class="checkbox-label" for="busterType1">自身红卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="busterType2">
+              <label class="checkbox-label" for="busterType2">己方单体红卡性能提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="busterType3">
+              <label class="checkbox-label" for="busterType3">己方全体红卡性能提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="busterType4">
+              <label class="checkbox-label" for="busterType4">敌方单体红卡耐性下降</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="busterType5">
+              <label class="checkbox-label" for="busterType5">敌方全体红卡耐性下降</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="np-charge-type-container">
+          <div class="np-charge-type-title">
+            <img src="source/skillIcon/64px-充能.png" alt="CHARGE" class="checkbox-icon">
+            <img src="source/skillIcon/64px-回合充能.png" alt="CHARGE_END_TURN" class="checkbox-icon">
+            <span class="search-bar-topic">充能类</span>
+          </div>
+        </div>
+        <div class="np-charge-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType1">
+              <label class="checkbox-label" for="npChargeType1">自身NP值增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType2">
+              <label class="checkbox-label" for="npChargeType2">己方单体NP值增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType3">
+              <label class="checkbox-label" for="npChargeType3">己方全体NP值增加</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType4">
+              <label class="checkbox-label" for="npChargeType4">回合结束时自身NP值增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType5">
+              <label class="checkbox-label" for="npChargeType5">回合结束时己方单体NP值增加</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npChargeType6">
+              <label class="checkbox-label" for="npChargeType6">回合结束时己方全体NP值增加</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="np-up-type-container">
+          <div class="np-up-type-title">
+            <img src="source/skillIcon/64px-NP获得量提升.png" alt="NP_UP" class="checkbox-icon">
+            <img src="source/skillIcon/64px-受击NP获得量提升.png" alt="INJURE_NP_UP" class="checkbox-icon">
+            <span class="search-bar-topic">黄金率类</span>
+          </div>
+        </div>
+        <div class="np-up-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType1">
+              <label class="checkbox-label" for="npUpType1">自身NP获得量提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType2">
+              <label class="checkbox-label" for="npUpType2">己方单体NP获得量提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType3">
+              <label class="checkbox-label" for="npUpType3">己方全体NP获得量提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType4">
+              <label class="checkbox-label" for="npUpType4">自身受击NP获得量提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType5">
+              <label class="checkbox-label" for="npUpType5">己方单体受击NP获得量提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="npUpType6">
+              <label class="checkbox-label" for="npUpType6">己方全体受击NP获得量提升</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="phantasm-type-container">
+          <div class="phantasm-type-title">
+            <img src="source/effectIcon/64px-宝具威力提升状态.png" alt="PHANTASM_UP" class="checkbox-icon">
+            <img src="source/effectIcon/64px-充能阶段上升状态.png" alt="PHANTASM_CHARGE_UP" class="checkbox-icon">
+            <span class="search-bar-topic">宝具类</span>
+          </div>
+        </div>
+        <div class="phantasm-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType1">
+              <label class="checkbox-label" for="phantasmType1">自身宝具威力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType2">
+              <label class="checkbox-label" for="phantasmType2">己方单体宝具威力提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType3">
+              <label class="checkbox-label" for="phantasmType3">己方全体宝具威力提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType4">
+              <label class="checkbox-label" for="phantasmType4">自身充能阶段上升状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType5">
+              <label class="checkbox-label" for="phantasmType5">己方单体充能阶段上升状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="phantasmType6">
+              <label class="checkbox-label" for="phantasmType6">己方全体充能阶段上升状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="inflict-death-type-container">
+          <div class="inflict-death-type-title">
+            <img src="source/effectIcon/64px-即死成功率提升状态.png" alt="INCLICT_DEATH_UP" class="checkbox-icon">
+            <img src="source/effectIcon/64px-即死耐性下降状态.png" alt="INCLICT_DEATH_RESIST_DOWN" class="checkbox-icon">
+            <span class="search-bar-topic">即死类</span>
+          </div>
+        </div>
+        <div class="inflict-death-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="inflictDeathType1">
+              <label class="checkbox-label" for="inflictDeathType1">自身即死成功率提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="inflictDeathType2">
+              <label class="checkbox-label" for="inflictDeathType2">己方单体即死成功率提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="inflictDeathType3">
+              <label class="checkbox-label" for="inflictDeathType3">己方全体即死成功率提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="inflictDeathType4">
+              <label class="checkbox-label" for="inflictDeathType4">敌方单体即死耐性下降</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="inflictDeathType5">
+              <label class="checkbox-label" for="inflictDeathType5">敌方全体即死耐性下降</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="debuff-resist-type-container">
+          <div class="debuff-resist-type-title">
+            <img src="source/effectIcon/OOO.PNG" alt="DEBUFF_UP" class="checkbox-icon">
+            <img src="source/effectIcon/64px-弱化耐性下降状态.png" alt="DEBUFF_RESIST_DOWN" class="checkbox-icon">
+            <span class="search-bar-topic">弱化类</span>
+          </div>
+        </div>
+        <div class="debuff-resist-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="debuffType1">
+              <label class="checkbox-label" for="debuffType1">自身弱化成功率提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="debuffType2">
+              <label class="checkbox-label" for="debuffType2">己方单体弱化成功率提升</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="debuffType3">
+              <label class="checkbox-label" for="debuffType3">己方全体弱化成功率提升</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="debuffType4">
+              <label class="checkbox-label" for="debuffType4">敌方单体弱化耐性下降</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="debuffType5">
+              <label class="checkbox-label" for="debuffType5">敌方全体弱化耐性下降</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="cleanse-type-container">
+          <div class="cleanse-type-title">
+            <img src="source/effectIcon/64px-弱化无效状态.png" alt="DEBUFF_AGAINST" class="checkbox-icon">
+            <img src="source/skillIcon/64px-弱化解除.png" alt="DEBUFF_CLEANSE" class="checkbox-icon">
+            <span class="search-bar-topic">弱化解除类</span>
+          </div>
+        </div>
+        <div class="cleanse-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="cleanseType1">
+              <label class="checkbox-label" for="cleanseType1">自身弱体解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="cleanseType2">
+              <label class="checkbox-label" for="cleanseType2">己方单体弱体解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="cleanseType3">
+              <label class="checkbox-label" for="cleanseType3">己方全体弱体解除</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="buff-remove-type-container">
+          <div class="buff-remove-type-title">
+            <img src="source/effectIcon/64px-强化解除耐性提升状态.png" alt="BUFF_REMOVE_RESIST" class="checkbox-icon">
+            <img src="source/effectIcon/64px-强化解除耐性下降状态.png" alt="BUFF_REMOVE_RESIST" class="checkbox-icon">
+            <span class="search-bar-topic">强化解除类</span>
+          </div>
+        </div>
+        <div class="buff-remove-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType1">
+              <label class="checkbox-label" for="buffRemoveType1">敌方单体强化解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType2">
+              <label class="checkbox-label" for="buffRemoveType2">敌方全体强化解除</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType3">
+              <label class="checkbox-label" for="buffRemoveType3">敌方单体防御强化解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType4">
+              <label class="checkbox-label" for="buffRemoveType4">敌方全体防御强化解除</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType5">
+              <label class="checkbox-label" for="buffRemoveType5">敌方单体无敌状态解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType6">
+              <label class="checkbox-label" for="buffRemoveType6">敌方全体无敌状态解除</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType7">
+              <label class="checkbox-label" for="buffRemoveType7">敌方单体闪避状态解除</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="buffRemoveType8">
+              <label class="checkbox-label" for="buffRemoveType8">敌方全体闪避状态解除</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="dot-type-container">
+          <div class="dot-type-title">
+            <img src="source/effectIcon/64px-中毒状态.png" alt="POISON" class="checkbox-icon">
+            <img src="source/effectIcon/64px-蚀毒状态.png" alt="POISON_ENHANCE" class="checkbox-icon">
+            <img src="source/effectIcon/64px-诅咒状态.png" alt="CURSE" class="checkbox-icon">
+            <img src="source/effectIcon/64px-咒厄状态.png" alt="CURSE_ENHANCE" class="checkbox-icon">
+            <img src="source/effectIcon/64px-灼伤状态.png" alt="BURN" class="checkbox-icon">
+            <img src="source/effectIcon/64px-延烧状态.png" alt="BURN_ENHANCE" class="checkbox-icon">
+            <span class="search-bar-topic">持续伤害类</span>
+          </div>
+        </div>
+        <div class="dot-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType1">
+              <label class="checkbox-label" for="dotType1">中毒状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType2">
+              <label class="checkbox-label" for="dotType2">诅咒状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType3">
+              <label class="checkbox-label" for="dotType3">灼伤状态</label class="checkbox-label">
+            </div>
+          </div>
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType4">
+              <label class="checkbox-label" for="dotType4">蚀毒状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType5">
+              <label class="checkbox-label" for="dotType5">咒厄状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="dotType6">
+              <label class="checkbox-label" for="dotType6">延烧状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+        <div class="controll-type-container">
+          <div class="controll-type-title">
+            <img src="source/effectIcon/64px-眩晕状态.png" alt="STUN" class="checkbox-icon">
+            <img src="source/effectIcon/64px-魅惑状态.png" alt="CHARM" class="checkbox-icon">
+            <img src="source/effectIcon/64px-猪化状态.png" alt="PIGGLET" class="checkbox-icon">
+            <img src="source/effectIcon/64px-睡眠状态.png" alt="SLEEP" class="checkbox-icon">
+            <span class="search-bar-topic">控制类</span>
+          </div>
+        </div>
+        <div class="controll-selectors-container">
+          <div class="line-group-container">
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="controllType1">
+              <label class="checkbox-label" for="controllType1">眩晕状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="controllType2">
+              <label class="checkbox-label" for="controllType2">魅惑状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="controllType3">
+              <label class="checkbox-label" for="controllType3">猪化状态</label class="checkbox-label">
+            </div>
+            <div class="checkbox-wrapper">
+              <input type="checkbox" id="controllType4">
+              <label class="checkbox-label" for="controllType4">睡眠状态</label class="checkbox-label">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="button-area">
+        <div class="including-check-box">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="includeSkill">
+            <label class="checkbox-label" for="includeSkill" checked="true">包括技能</label class="checkbox-label">
+          </div>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="includePhantasm">
+            <label class="checkbox-label" for="includePhantasm">包括宝具</label class="checkbox-label">
+          </div>
+        </div>
+        <div class="buttons-container">
+          <button class="search-button">Search</button>
+          <button class="clear-button">Clear All Inputs</button>
+        </div>
+      </div>
+    </div>
+    <div class="result-list-container">
+      <div lang="zh-CN" class="result-list-title">结果</div>
+      <div class="result-class-filter">
+        <div class="flex-row">
+          <img class="gold-classes" src="./source/classIcons/金卡All.png" alt="gold" onclick="selectAllClasses()"/>
+          <img class="bronze-classes" src="./source/classIcons/铜卡All.png" alt="bronze" onclick="removeAllClasses()"/>
+        </div>
+        <div class="flex-row">
+          <img class="class-icons-saber"      src="./source/classIcons/铜卡Saber.png" alt="Saber" onclick="selectThisClass(this)"/>
+          <img class="class-icons-lancer"     src="./source/classIcons/铜卡Lancer.png" alt="Lancer" onclick="selectThisClass(this)"/>
+          <img class="class-icons-archer"     src="./source/classIcons/铜卡Archer.png" alt="Archer" onclick="selectThisClass(this)"/>
+          <img class="class-icons-rider"      src="./source/classIcons/铜卡Rider.png" alt="Rider" onclick="selectThisClass(this)"/>
+          <img class="class-icons-caster"     src="./source/classIcons/铜卡Caster.png" alt="Caster" onclick="selectThisClass(this)"/>
+          <img class="class-icons-assassin"   src="./source/classIcons/铜卡Assassin.png" alt="Assassin" onclick="selectThisClass(this)"/>
+          <img class="class-icons-berserker"  src="./source/classIcons/铜卡Berserker.png" alt="Berserker" onclick="selectThisClass(this)"/>
+        </div>
+        <div class="flex-row">
+          <img class="class-icons-ruler"      src="./source/classIcons/铜卡Ruler.png" alt="Ruler" onclick="selectThisClass(this)"/>
+          <img class="class-icons-avenger"    src="./source/classIcons/铜卡Avenger.png" alt="Avenger" onclick="selectThisClass(this)"/>
+          <img class="class-icons-alterego"   src="./source/classIcons/铜卡Alterego.png" alt="Alterego" onclick="selectThisClass(this)"/>
+          <img class="class-icons-mooncancer" src="./source/classIcons/铜卡MoonCancer.png" alt="MoonCancer" onclick="selectThisClass(this)"/>
+          <img class="class-icons-foreigner"  src="./source/classIcons/铜卡Foreigner.png" alt="Foreigner" onclick="selectThisClass(this)"/>
+          <img class="class-icons-pretender"  src="./source/classIcons/铜卡Pretender.png" alt="Pretender" onclick="selectThisClass(this)"/>
+        </div>
+      </div>
+      <div class="result-list"></div>
+    </div>
+  </body>
+  <footer>
+  </footer>
+</html>

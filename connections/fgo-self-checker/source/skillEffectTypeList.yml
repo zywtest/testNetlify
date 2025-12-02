@@ -1,0 +1,129 @@
+let staticList = {
+  "ATK": {
+    "SELF_ATK_UP": "",                // 自身的攻击力提升
+    "ALLY_SINGLE_ATK_UP": "",         // 己方单体的攻击力提升
+    "ALLY_ALL_ATK_UP": "",            // 己方全体的攻击力提升
+  },
+  "DEF": {
+    "SELF_DEF_UP": "",                // 自身的防御力提升
+    "ALLY_SINGLE_DEF_UP": "",         // 己方单体的防御力提升
+    "ALLY_ALL_DEF_UP": "",            // 己方单体的防御力提升
+    "ENEMY_SINGLE_DEF_DOWN": "",      // 敌方单体的防御力降低
+    "ENEMY_ALL_DEF_DOWN": "",          // 敌方全体的防御力降低
+    "SELF_DEF_IGNORE": "",            // 自身防御力无视状态
+    "ALLY_SINGLE_DEF_IGNORE": "",     // 己方单体防御力无视状态
+    "ALLY_ALL_DEF_IGNORE": "",        // 己方全体防御力无视状态
+  },
+  "SIDESTEP": {
+    "SELF_SIDESTEP": "",              //
+    "ALLY_SINGLE_SIDESTEP": "",       //
+    "ALLY_ALL_SIDESTEP": "",           //
+    "SELF_SIDESTEP_IGNORE": "",              //
+    "ALLY_SINGLE_SIDESTEP_IGNORE": "",       //
+    "ALLY_ALL_SIDESTEP_IGNORE": "",           //
+  },
+  "INVINCIBLE": {
+    "SELF_INVINCIBLE": "",            //
+    "ALLY_SINGLE_INVINCIBLE": "",     //
+    "ALLY_ALL_INVINCIBLE": "",         //
+    "SELF_INVINCIBLE_IGNORE": "",            //
+    "ALLY_SINGLE_INVINCIBLE_IGNORE": "",     //
+    "ALLY_ALL_INVINCIBLE_IGNORE": ""         //
+  },
+  "CREATE_STAR": {
+    "CREATE_STAR_WHEN_ENTRY": "",    //
+    "CREATE_STAR_THIS_TURN": "",     //
+    "CREATE_STAR_END_OF_TURN": "",   //
+    "CREATE_STAR_AFTER_DEATH": ""    //
+  },
+  "STAR_DROP": {
+    "SELF_STAR_DROP_UP": "",                //
+    "ALLY_SINGLE_STAR_DROP_UP": "",         //
+    "ALLY_ALL_STAR_DROP_UP": "",            //
+  },
+  "CRITICAL": {
+    "SELF_CRITICAL_UP": "",                     // 自身的攻击力提升
+    "ALLY_SINGLE_CRITICAL_UP": "",              //
+    "ALLY_ALL_CRITICAL_UP": "",                 //
+    "ENEMY_SINGLE_CRITICAL_DEF_DOWN": "",       //
+    "ENEMY_ALL_CRITICAL_DEF_DOWN": ""           //
+  },
+  "BURST": {
+    "SELF_BURST_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_BURST_UP": "",             //
+    "ALLY_ALL_BURST_UP": "",                //
+    "ENEMY_SINGLE_BURST_DEF_DOWN": "",      //
+    "ENEMY_ALL_BURST_DEF_DOWN": ""          //
+  },
+  "QUICK": {
+    "SELF_QUICK_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_QUICK_UP": "",             //
+    "ALLY_ALL_QUICK_UP": "",                //
+    "ENEMY_SINGLE_QUICK_DEF_DOWN": "",      //
+    "ENEMY_ALL_QUICK_DEF_DOWN": ""          //
+  },
+  "ARTS": {
+    "SELF_ARTS_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_ARTS_UP": "",             //
+    "ALLY_ALL_ARTS_UP": "",                //
+    "ENEMY_SINGLE_ARTS_DEF_DOWN": "",      //
+    "ENEMY_ALL_ARTS_DEF_DOWN": ""          //
+  },
+  "NP_CHARGE": {
+    "SELF_NP_CHARGE": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_NP_CHARGE": "",             //
+    "ALLY_ALL_NP_CHARGE": "",                //
+  },
+  "NP_UP": {
+    "SELF_NP_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_NP_UP": "",             //
+    "ALLY_ALL_NP_UP": "",                //
+  },
+  "NP_DRAIN": {
+    "ALLY_SINGLE_NP_DRAIN": "",             //
+    "ALLY_ALL_NP_DRAIN": "",                //
+    "ENEMY_SINGLE_NP_DRAIN": "",            //
+    "ENEMY_ALL_NP_DRAIN": "",               //
+  },
+  "PHANTASM": {
+    "SELF_PHANTASM_UP": "",
+    "ALLY_SINGLE_PHANTASM_UP": "",
+    "ALLY_ALL_PHANTASM_UP": "",
+    "SELF_PHANTASM_OVERCHARGE": "",
+    "ALLY_SINGLE_PHANTASM_OVERCHARGE": "",
+    "ALLY_ALL_PHANTASM_OVERCHARGE": "",
+  },
+  "INFLICT_DEATH": {
+    "SELF_INFLICT_DEATH_UP": "",
+    "ALLY_SINGLE_INFLICT_DEATH_UP": "",
+    "ALLY_ALL_INFLICT_DEATH_UP": "",
+    "ENEMY_SINGLE_INFLICT_DEATH_RESIST_DOWN": "",
+    "ENEMY_ALL_INFLICT_DEATH_RESIST_DOWN": "",
+  },
+  "DEBUFF_RESIST": {
+    "SELF_DEBUFF_RESIST_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_DEBUFF_RESIST_UP": "",             //
+    "ALLY_ALL_DEBUFF_RESIST_UP": "",                //
+  },
+  "CLEANSE": {
+    "SELF_DEBUFF_CLEANSE": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_DEBUFF_CLEANSE": "",             //
+    "ALLY_ALL_DEBUFF_CLEANSE": "",                //
+  },
+  "BUFF_REMOVE": {
+    "SELF_BUFF_REMOVE_RESIST_UP": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_REMOVE_RESIST_UP": "",             //
+    "ALLY_ALL_REMOVE_RESIST_UP": "",                //
+    "ENEMY_SINGLE_BUFF_REMOVE": "",             //
+    "ENEMY_ALL_BUFF_REMOVE": "",                //
+    "ENEMY_SINGLE_ATK_BUFF_REMOVE": "",             //
+    "ENEMY_ALL_ATK_BUFF_REMOVE": "",                //
+    "ENEMY_SINGLE_DEF_BUFF_REMOVE": "",             //
+    "ENEMY_ALL_DEF_BUFF_REMOVE": "",                //
+  },
+  "HEAL": {
+    "SELF_HEAL": "",                    // 自身的攻击力提升
+    "ALLY_SINGLE_HEAL": "",             //
+    "ALLY_ALL_HEAL": "",                //
+  }
+};

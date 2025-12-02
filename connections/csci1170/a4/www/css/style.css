@@ -1,0 +1,367 @@
+/*	 BODY	*/
+.no-m-p 
+{
+	margin: 0;
+	padding: 0;
+	background-color: #DDA0DD;
+}
+/*move intext style into css*/
+.no-m-p table
+{
+	width: 100%;
+	border: 0; 
+	border-spacing: 0;
+    border-collapse: collapse;
+}
+.no-m-p table td 
+{ 
+    padding: 0;
+}
+#styleintd
+{
+	width: 75%;
+}
+/*	HEADER	*/
+.header
+{
+	background-color: #00abff;
+	color: #FFFFFF;
+	height: 60px;
+}
+/*	FOOTER 	*/
+footer 
+{
+	font-size: 0.8em;
+	text-transform: uppercase;
+	height: 80px;
+	line-height: 80px;
+	vertical-align: middle;
+	background-color: #000000;
+	color: white;
+	padding: 16px;
+}
+/*	 NAV	*/
+.links
+{
+	float: right;
+	padding-top: 0;
+	display: inline-block;
+	position: relative;
+}
+.links ul
+{
+	float: left;
+ 	padding: 0;
+ 	margin: 0;
+}
+.links ul li
+{
+	float: left;
+	list-style-type: none;
+}
+.links ul li a, .links ul li a:link, .links ul li a:active 
+{
+	display: block;
+	padding: .5em;
+	margin: 0 2px;
+	text-decoration: none;
+	color: #238FBC;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+.links ul li a:hover, .links ul li a:visited 
+{
+	color: #003C54;
+	border-bottom: 2px solid #003c54;
+	padding-bottom: 0.3em;
+}
+.links:after 
+{
+	content:"";
+	display: table;
+	clear: both;
+}
+/*	NEWS 	*/
+.news 
+{
+	margin: 0.5em 1em;
+	padding: 1em;
+	background-color: #EFEFEF;
+	font-size: 0.9em;
+	width: 10%;
+	color: #000;
+	vertical-align: top;
+}
+#marquee1 
+{
+    height: 150px;
+    width: 240px;
+    position: relative;
+    font-size: 1.1em;
+    overflow: hidden;
+    vertical-align: center;
+}
+#marquee1 span
+{
+    display: inline-block;
+    animation: bot-to-top 10s linear infinite;
+  }
+#marquee1 span:hover 
+{
+    animation-play-state: paused;
+}
+@keyframes bot-to-top
+{
+	from {transform: translate(0,100px);}
+    to {transform: translate(0,-160px);}
+}
+
+#width_set
+{
+	width: 75%;
+}
+#width_set #marquee2
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	overflow: hidden;
+}
+#width_set #marquee2 span
+{
+	width: 100%;
+	display: inline-block;
+    animation: toleft 15s linear infinite;
+}
+@keyframes toleft
+{
+	from {transform: translate(100%);}
+    to {transform: translate(-15%);}
+}
+#width_set table tr:nth-child(2)
+{
+	padding: 20px 0;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+#width_set table tr:nth-child(3)
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	text-align: justify;
+	margin: 0.5em 1em;
+	min-height: 250px;
+}
+#width_set table tr:nth-child(3) td:nth-child(3n+1)
+{
+	margin: 0.5em 1em;
+	padding: 1em;
+	width: 25%;
+	background-color: #B8DDDD;
+	border-bottom: solid 2px #007070;
+}
+#width_set table tr:nth-child(3) td:nth-child(3n+2)
+{
+	margin: 0.5em 1em;
+	padding: 1em;
+	width: 25%;
+	background-color: gold;
+	border-bottom: solid 2px #007070;
+}
+#width_set table tr:nth-child(3) td:nth-child(3n)
+{
+	margin: 0.5em 1em;
+	padding: 1em;
+	width: 25%;
+	background-color: #FF6347;
+	border-bottom: solid 2px #007070;
+}
+
+#marquee3
+{
+	width: 100%;
+	height: 50px;
+	font-size: 1.5em;
+	font-weight: bold;
+	overflow: hidden;
+}
+#marquee3 span
+{
+	width: 100%;
+	display: inline-block;
+    animation: marqueethree 15s linear infinite;
+}
+@keyframes marqueethree
+{
+	from {transform: translate(100%);}
+    to {transform: translate(-15%);}
+}
+#to-middle
+{
+	padding: 20px 0;
+	height: 30px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+section
+{
+	margin-left: 1%;
+  	margin-right: auto;
+	padding: 1em 2em;
+	width: 45%;
+	float: left;
+	display: inline-block;
+	position: relative;
+	background-color: #B8DDDD;
+	min-height: 500px;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, Helvetica, Arial, sans-serif;
+}
+section img
+{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	text-align: center;
+	background-color: #efefef;
+}
+section p
+{
+	padding: 0 2em;
+	letter-spacing: 1px;
+}
+#styleintd p
+{
+	width: 31%;
+	float: left;
+	font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, Helvetica, Arial, sans-serif;
+	letter-spacing: 1px;
+	text-align: justify;
+	color: #238FBC;
+	background-color: #FFFACD;
+	margin: 0.5em 1em;
+	padding: 1em;
+	min-height: 300px;
+}
+#styleintd p:after 
+{
+	content:"";
+	display: table;
+	clear: both;
+}
+#at-right-bottom
+{
+	width: 33%;
+	display: block;
+	float: left;
+	margin: 0.5em 0 0.5em 4em;
+	padding: 1em;
+	width: 400px;
+	min-height: 300px;
+}
+#at-right-bottom:after 
+{
+	content:"";
+	display: table;
+	clear: both;
+}
+#marquee4
+{	
+	height: 200px;
+    position: relative;
+    font-size: 1.1em;
+    overflow: hidden;
+    vertical-align: center;
+}
+#marquee4 span
+{
+	clear: both;
+	width: 100%;
+	display: inline-block;
+    animation: to-top 5s linear infinite;
+}
+#marquee4 span:hover 
+{
+    animation-play-state: paused;
+}
+@keyframes to-top
+{
+	from {transform: translate(0%,200%);}
+    to {transform: translate(0%,-100px);}
+}
+h6/* just build for the section rule, need to hide the header*/
+{
+	visibility: hidden;
+}
+
+ /* @media start */
+          
+ /*This CSS will apply for smartphones devices with the maximum width of 800 pixels*/
+@media only screen and (min-width: 800px) 
+{
+    body
+    {
+    	width: 100%;
+    }
+    section
+	{
+		margin-left: 1%;
+	  	margin-right: auto;
+		padding: 1em 2em;
+		width: 100%;
+		float: left;
+		display: inline-block;
+		position: relative;
+		background-color: #B8DDDD;
+		min-height: 500px;
+		font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, Helvetica, Arial, sans-serif;
+	}
+	section img
+	{
+		width: 50%;
+		height: 25%;
+		display: block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+		text-align: center;
+	}
+	section p
+	{
+		padding: 0 2em;
+		letter-spacing: 1px;
+	}
+	#styleintd
+	{
+		height: 100px;
+	}
+	#styleintd p
+	{	
+		min-height: 0;
+		width: 100%;
+	}
+	footer
+	{
+		width: 100%;
+	}
+	#width_set table tr:nth-child(3) td:nth-child(3n)
+	{
+		margin: 0.5em 1em;
+		padding: 1em;
+		width: 100%;
+		background-color: #FF6347;
+		border-bottom: solid 2px #007070;
+	}    
+}
+/*
+-Desktop computers
+-This CSS will apply for devices with the minimum width of 1140 pixels
+This is the defalut version for this website
+*/
+@media only screen and (min-width: 1140px) 
+{
+	
+}
+          
+/* @media end */

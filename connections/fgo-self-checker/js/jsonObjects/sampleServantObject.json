@@ -1,0 +1,78 @@
+{
+  "ID": {
+    "servantName-CN":   "",
+    "servantName-JP":   "",
+    "characterPicture": {
+      "src":    ""
+    },
+    "class":            "",
+    "rare":             "",
+    "painter":          "",
+    "voicer":           "",
+    "sexual":           "",
+    "attribute":        "",
+    "attribute-other":  "",
+    "strength":         "",
+    "stamina":          "",
+    "agile":            "",
+    "magic":            "",
+    "fortune":          "",
+    "phantasm":         "",
+    "commandCard1":     "",
+    "commandCard2":     "",
+    "commandCard3":     "",
+    "commandCard4":     "",
+    "commandCard5":     "",
+    "quickHitValue":    "",
+    "artsHitValue":     "",
+    "burstHitValue":    "",
+    "extraHitValue":    "",
+    "phantasmHitValue": "",
+    "quickNPRate":      "",
+    "artsNPRate":       "",
+    "burstNPRate":      "",
+    "extraNPRate":      "",
+    "phantasmNPRate":   "",
+    "injureNPRate":     "",
+    "starRate":         "",
+    "inflictDeathRate": "",
+    "starGatherRate":   "",
+    "specialAttributes":      [],
+    "phantasmIcon":           {
+      "src":    "",
+      "color":  ""
+    },
+    "phantasmNameCNUP":       "",
+    "phantasmNameCN":         "",
+    "phantasmNameJPUP":       "",
+    "phantasmNameJP":         "",
+    "phantasmLevel":          "",
+    "phantasmType":           "",
+    "phantasmExtraEffect":    [],
+    "phantasmDescription":    [],
+    "SkillOneIcon":           {
+      "src":    "",
+      "color":  ""
+    },
+    "skillOneNameJP":         "",
+    "skillOneNameCN":         "",
+    "skillOneExtraEffect":    [],
+    "skillOneDescription":    [],
+    "SkillTwoIcon":           {
+      "src":    "",
+      "color":  ""
+    },
+    "skillTwoNameJP":         "",
+    "skillTwoNameCN":         "",
+    "skillTwoExtraEffect":    [],
+    "skillTwoDescription":    [],
+    "SkillThreeIcon":         {
+      "src":    "",
+      "color":  ""
+    },
+    "skillThreeNameJP":       "",
+    "skillThreeNameCN":       "",
+    "skillThreeExtraEffect":  [],
+    "skillThreeDescription":  []
+  }
+}

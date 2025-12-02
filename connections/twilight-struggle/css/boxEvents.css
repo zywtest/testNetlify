@@ -1,0 +1,52 @@
+g[class ^= 'influence-box-'] > rect[class $= '-present'] {
+  fill: white;
+}
+
+g[class ^= 'influence-box-'] > rect.blue-present  ~ text[id $= '-blue-value'] {
+  fill: blue;
+}
+g[class ^= 'influence-box-'] > rect.red-present   ~ text[id $= '-red-value'] {
+  fill: rgba(255, 0, 0, 0.658);
+}
+
+g[class ^= 'influence-box-'] > rect.blue-controlled {
+  fill: rgba(0, 0, 255, 0.658);
+}
+
+g[class ^= 'influence-box-'] > rect.red-controlled {
+  fill: red;
+}
+
+g[class ^= 'influence-box-'] > rect.blue-controlled ~ text[id $= '-blue-value'],
+g[class ^= 'influence-box-'] > rect.red-controlled  ~ text[id $= '-red-value'] {
+  fill: white;
+}
+
+g[class ^= 'influence-box-'] > rect.info-box-background.neiborHighlight {
+  animation: highlight 1s ease infinite;
+  -webkit-animation: highlight 1s ease infinite;
+  -o-animation: highlight 1s ease infinite;
+  -moz-animation: highlight 1s ease infinite;
+  -ms-zoom-animation: highlight 1s ease infinite;
+}
+
+@keyframes highlight {
+  0% {
+    fill: rgb(255, 72, 0);
+  }
+  10% {
+    fill: yellow;
+  }
+  30% {
+    fill: rgb(255, 72, 0);
+  }
+  80% {
+    fill: rgb(255, 72, 0);
+  }
+  90% {
+    fill: yellow;
+  }
+  100% {
+    fill: rgb(255, 72, 0);
+  }
+}

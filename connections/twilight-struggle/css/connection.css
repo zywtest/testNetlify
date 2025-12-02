@@ -1,0 +1,20 @@
+line {
+  transform: scale(0.67);
+  stroke: brown;
+  stroke-width: 4;
+}
+
+line.inter-regional {
+  stroke: firebrick;
+  stroke-dasharray: 3, 3;
+}
+
+line.toSuperPower {
+  stroke: black;
+  stroke-width: 6;
+}
+
+text.US-JP-label {
+  font-size: x-small;
+  font-weight: 700;
+}

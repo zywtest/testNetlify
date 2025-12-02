@@ -1,0 +1,51 @@
+/** ------------------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------------------*/
+ h2 {
+  display: inline-block;
+  font-size: 40px;
+  margin-right: 20px;
+}
+
+/** ------------------------------------------------------------------------------
+ * Provide a rainbow background
+ * ------------------------------------------------------------------------------*/
+.rainbowbox {
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+
+/** ------------------------------------------------------------------------------
+ * Set font color as rainbow
+ * ------------------------------------------------------------------------------*/
+.rainbowtext {
+  color: red; /* fallback color */
+  background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+  /* magic workarounds for modern browsers */
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+  /* make all colors visible at once */
+  background-size: 100% 60%;
+}
+
+/** ------------------------------------------------------------------------------
+ * rainbow-colored font with animation
+ * ------------------------------------------------------------------------------*/
+.rainbowtext-animated {
+  color: red; /* fallback color */
+  background: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+  /* magic workarounds for modern browsers */
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+  /* animate the gradient */
+  -webkit-animation: AnimateTextGradient 7s ease infinite;
+  animation: AnimateTextGradient 7s ease infinite;
+  background-size: 100% 60%;
+}
+
+@keyframes AnimateTextGradient {
+  0% { background-position: 50% 0; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 50% 0; }
+}

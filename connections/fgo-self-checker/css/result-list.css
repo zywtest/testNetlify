@@ -1,0 +1,40 @@
+.result-list-container {
+  width: 100%;
+}
+.result-class-filter {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  margin-bottom: 10px;
+}
+.result-class-filter > .flex-row {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  justify-content: center;
+}
+.result-class-filter > .flex-row > img {
+  margin-right: 5px;
+}
+.result-class-filter > .flex-row > img:last-child {
+  margin-right: 0;
+}
+
+
+.result-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.result-list > img.servant-icon {
+  width: auto;
+  height: auto;
+  margin: 10px;
+}
+.result-list > img.servant-icon.out-of-option {
+  display: none;
+}
+.result-list > img.servant-icon.out-of-filter {
+  display: none;
+}

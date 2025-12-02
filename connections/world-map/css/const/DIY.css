@@ -1,0 +1,55 @@
+g.red {
+  fill: red;
+}
+g.blue {
+  fill: blue;
+}
+g.black {
+  fill: black;
+}
+
+.DIY-red .red-title {
+  background:#FF2B00;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  font-style: oblique;
+  text-align: center;
+  width: 150px;
+  vertical-align: middle;
+  border: 7px solid black;
+}
+.DIY-red .DIY-red-stat, .DIY-blue .DIY-blue-stat, .DIY-black .DIY-black-stat {
+  height: 100px;
+}
+.blue-title {
+  background:dodgerblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  font-style: oblique;
+  text-align: center;
+  width: 150px;
+  vertical-align: middle;
+  border: 7px solid black;
+}
+.black-title {
+  background:white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  font-style: oblique;
+  text-align: center;
+  width: 150px;
+  vertical-align: middle;
+  border: 7px solid black;
+}
+.hint-area {
+  background-color:brown;
+  color:lime;
+  margin: 10px 0;
+  width: 300px;
+  font-family: Helvetica, sans-serif;
+  font-size:small;
+  font-weight: 200;
+}

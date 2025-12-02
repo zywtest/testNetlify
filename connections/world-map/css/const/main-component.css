@@ -1,0 +1,43 @@
+#introduction, #instruction {
+  height: 140px;
+  font-size: x-large;
+  font-style: italic;
+  font-family: Helvetica, 'Franklin Gothic Medium', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  background-color: coral;
+}
+#introduction {
+  height: 40px;
+}
+
+.button-container {
+  display: flex;
+  overflow: auto;
+  width: 1000px;
+  height: 130px;
+  flex-wrap: wrap;
+}
+
+.button-warpper {
+  display: flex;
+  width: 800px;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+
+
+.title {
+  background: brown;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size: larger;
+  font-style: oblique;
+  text-align: center;
+  width: 150px;
+  vertical-align: middle;
+  border: 7px solid black;
+}

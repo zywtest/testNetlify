@@ -1,0 +1,14 @@
+@media screen and (max-width: 1000px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  div.result-list-container > div.result-class-filter > div.flex-row > img {
+    width: 40px;
+    height: 40px;
+  }
+  div.result-list-container > div.result-list > img.servant-icon {
+    width: 66px;
+    height: 72px;
+  }
+}

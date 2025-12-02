@@ -1,0 +1,77 @@
+/** ------------------------------------------------------------------------------
+ * Header
+ * ------------------------------------------------------------------------------*/
+header {
+  width: 695px;
+  margin: 0 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 75px;
+}
+
+header > div.title {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+header > div.title > div[class="title-group"] {
+  display: flex;
+  flex-direction: row;
+}
+
+header > div.title > div[class="title-group"] > div{
+  border: 4px solid black;
+}
+
+header > div.title > div[class="title-group"] > div > h1{
+  font-family: fantasy, sans-serif;
+}
+
+header > div.title > div[class="title-group"] > div.twi {
+  background: linear-gradient(rgb(138, 0, 4), rgb(213, 0, 6));
+  border-radius: 25% 0 0 25%;
+}
+
+header > div.title > div[class="title-group"] > div.twi > h1 {
+  margin: 50% 10px;
+  color: black;
+}
+
+header > div.title > div[class="title-group"] > div.str {
+  background: black;
+  border-radius: 0 25% 25% 0;
+}
+
+header > div.title > div[class="title-group"] > div.str > h1 {
+  color: red; /* fallback color */
+  background: hsl(358, 100%, 34%);
+  /* magic workarounds for modern browsers */
+  -webkit-text-fill-color: transparent;
+  background-clip: unset;
+  -webkit-background-clip: text;
+  margin: 50% 10px;
+}
+
+header > div.title > div.cc {
+  margin-left: 10px;
+}
+
+header > div.title > div.cc > h1 {
+  font-family: cursive, sans-serif;
+}
+
+header > div.icon-container {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+header > div i {
+  border: 0;
+  font-size: 40px;
+  cursor: pointer;
+  flex: 1;
+}

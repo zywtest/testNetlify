@@ -1,0 +1,48 @@
+text.DEFCON-TITLE {
+  fill: black;
+  font-size: x-large;
+  font-weight: 800;
+}
+
+rect[class ^= "DEFCON-LEVEL-"] {
+  width: 40px;
+  height: 40px;
+  fill: gray;
+  opacity: 0.2;
+}
+
+text[class ^= "DEFCON-LEVEL-LABEL"] {
+  fill: black;
+  font-size: x-large;
+  font-weight: 800;
+  opacity: 0.2;
+}
+
+rect.DEFCON-LEVEL-5.toggle-on,
+rect.DEFCON-LEVEL-5.toggle-on ~ rect {
+  fill: white;
+}
+rect.DEFCON-LEVEL-4.toggle-on,
+rect.DEFCON-LEVEL-4.toggle-on ~ rect {
+  fill: lightgreen;
+}
+rect.DEFCON-LEVEL-3.toggle-on,
+rect.DEFCON-LEVEL-3.toggle-on ~ rect {
+  fill: gold;
+}
+rect.DEFCON-LEVEL-2.toggle-on,
+rect.DEFCON-LEVEL-2.toggle-on ~ rect {
+  fill: red;
+}
+rect.DEFCON-LEVEL-1.toggle-on {
+  fill: black;
+}
+rect.DEFCON-LEVEL-1.toggle-on + text {
+  fill: white;
+}
+
+rect[class ^= "DEFCON-LEVEL-"].toggle-on,
+rect[class ^= "DEFCON-LEVEL-"].toggle-on ~ rect,
+rect[class ^= "DEFCON-LEVEL-"].toggle-on ~ text {
+  opacity: 1;
+}

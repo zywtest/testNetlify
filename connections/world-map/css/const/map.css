@@ -1,0 +1,114 @@
+html, body {
+  width: 1850px;
+  height: 620px;
+  margin: auto auto;
+}
+body {
+  background-color: lightseagreen;
+  height: 100%;
+}
+
+.left {
+  width: 400px;
+  height: 100%;
+  float: left;
+  margin-right: 10px;
+}
+.right {
+  width: 400px;
+  height: 100%;
+  float: left;
+  margin-left: 10px;
+}
+.main {
+  float: left;
+}
+
+#mapwrapper {
+  height: 100%;
+  width: 1000px;
+}
+
+#map {
+  background: lightseagreen;
+  width: 1000px;
+}
+
+#svg2 {
+  width: 1000px;
+}
+
+g.mouseover {
+  fill: hsl(120, 98%, 60%) !important;
+}
+
+.right:after {
+  clear: both;
+}
+
+g.searchOver {
+  animation: blink 1s ease infinite;
+  -webkit-animation: blink 1s ease infinite;
+  -o-animation: blink 1s ease infinite;
+  -moz-animation: blink 1s ease infinite;
+  -ms-zoom-animation: blink 1s ease infinite;
+}
+g.searchOver.mouseover {
+  fill: hsl(120, 98%, 60%) !important;
+}
+@keyframes blink {
+  0% {
+    fill: purple;
+  }
+  10% {
+    fill: yellow;
+  }
+  30% {
+    fill: purple;
+  }
+  80% {
+    fill: purple;
+  }
+  90% {
+    fill: yellow;
+  }
+  100% {
+    fill: purple;
+  }
+}
+
+/*	FOOTER 	*/
+footer {
+  bottom: 0;
+	background-color: black;
+  color: white;
+	margin: 0;
+}
+footer div {
+  text-align: center;
+	padding: 20px 1em;
+}
+footer nav {
+	padding: 20px 1em;
+}
+
+footer nav a, footer nav a:link, footer nav a:active {
+	display: inline-block;
+	text-decoration: none;
+	font-weight: 400;
+  font-size: small;
+  font-style: oblique;
+	letter-spacing: 1px;
+	color: white;
+	padding: 1em .5em;
+	margin: 0 2px;
+}
+footer nav a:hover {
+	color: #F2AC00;/*The "gold" colour is represented by #F2AC00.*/
+	/*there is no background-color change in the video*/
+}
+footer:after {
+	content: "";
+	display: table;
+	clear: both;
+}

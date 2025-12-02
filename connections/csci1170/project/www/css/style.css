@@ -1,0 +1,411 @@
+html
+{
+	background-color: #BB8FCE;
+}
+body 
+{
+	width: 1200px;
+	margin: 0px auto;
+	background-color: #A2CE8F;
+	font-family: Arial, Helvetica, sans-serif
+}
+header 
+{
+	width: 100%;
+	background-color: #CE8FA2;
+	overflow: auto;
+}
+
+nav 
+{
+	height: 36px;
+	background-color: black;
+	overflow: auto;
+}
+nav ul 
+{
+	margin: 0px;
+	list-style-type: none;
+}
+nav ul li 
+{
+	display: inline-block;
+	padding-right: 18px;
+	line-height: 36px;
+}
+nav ul li a:link, nav ul li a:visited, nav ul li a:active
+{
+	text-decoration: none;
+	color: white;
+}
+nav ul li a:hover 
+{
+	text-decoration: none;
+	color: #F2AC00;
+}
+ul.menu .sub-menu 
+{
+	display: none;
+	position: absolute;
+	background-color: #CE8FA2;
+	min-width: 150px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+ul.menu .sub-menu a 
+{
+	padding: 0.5em;
+	margin: 0 2px;
+	text-decoration: none;
+	color: #5023BC;
+}
+li.dropdown:hover .sub-menu
+{
+	display: block;
+}
+li.dropdown:hover .sub-menu a
+{
+	border-bottom: 2px solid #003c54;
+	padding-bottom: 0.3em;
+}
+footer 
+{
+	clear: left;
+	padding: 18px;
+	background-color: #CE8FA2;
+	overflow: auto;
+}
+footer p 
+{
+	font-style: italic;
+	font-weight: bold;
+
+}
+article 
+{
+	padding: 18px;
+	overflow: auto;
+}
+article:nth-child(3n+1)
+{
+	background-color: #ABD1DA;
+}
+article:nth-child(3n+2)
+{
+	background-color: #8FCE9C;
+}
+article:nth-child(3n)
+{
+	background-color: #8FC2CE;
+}
+article p 
+{
+	padding-right: 10px;
+}
+section 
+{
+	padding: 18px;
+}
+aside 
+{
+	background-color: #f1f1f1;
+	padding: 18px;
+}
+aside p 
+{
+	font-size: 80%;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #707372;
+}
+dt 
+{
+	font-style: italic;
+	padding: 10px 0px 0px 10px;
+}
+
+.main-container 
+{
+	width: 100%;
+}
+.left-container 
+{
+	width: 70%;
+	float: left;
+}
+.right-container 
+{
+	width: 30%;
+	float: left;
+}
+
+#left-section 
+{
+	float: left;
+	width: 50%;
+}
+#right-section 
+{
+	float: left;
+	width: 50%;
+}
+#contact-division 
+{
+	background-color: #8FCECB;
+	padding: 18px;
+}
+#contact-division h2 
+{
+	font-size: 75%;
+	text-transform: uppercase;
+}
+#contact-division p 
+{
+	font-size: 80%;
+}
+#logo 
+{
+	margin-right: 2px;
+	float: left;
+	width: 200px;
+	height: 108px;
+}
+#newsHeading {
+	text-transform: uppercase;
+	font-size: 75%;
+}
+#hospital {
+	width: 320px;
+	height: 244px;
+	float: left;
+	padding: 0px 18px 18px 0px;
+}
+#COVID-19
+{
+	width: 307px;
+	height: 130px;
+	float: left;
+	padding: 0px 18px 18px 0px;
+}
+#primaryNav
+{
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+#Care
+{
+	max-width: 100%;
+}
+#yourself
+{
+	width: 45%;
+	float: left;
+}
+#selfcare
+{
+	width: 45%;
+	float: left;
+}
+#Care:after
+{
+	clear: both;
+	content:"";
+	display: table;
+}
+h3, h4
+{
+	text-transform: uppercase;
+}
+#marquee
+{
+	background-color: #CE8FA2;
+	height: 100px;
+	width: 100%;
+	padding: 2em 0 0 0;
+	font-size: 2em;
+	font-weight: bold;
+	overflow: hidden;
+	vertical-align: middle;
+}
+#marquee span
+{
+	width: 100%;
+	display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+@keyframes marquee
+{
+	from {transform: translate(100%);}
+    to {transform: translate(-100%);}
+}
+#main_bar
+{
+	width: 100%;
+	margin: 0;
+}
+#diagnosis, #Stuff, #prescription
+{
+	width: 300px;
+	height: 200px;
+	margin: 0 2px;
+}
+#main_bar article
+{
+	float: left;
+	width: 30%;
+	overflow: auto;
+	margin: 0 1px;
+	min-height: 900px;
+}
+#main_bar article p
+{
+	font-size: 1.3em;
+}
+#main_bar:after
+{
+	clear: both;
+	content:"";
+	display: table;
+}
+ /* @media start */
+          
+ /*This CSS will apply for smartphones devices with the maximum width of 480 pixels*/
+@media only screen and (max-width: 480px) 
+{
+    body 
+    {
+    	width: 100%;
+    }
+    #logo
+    {
+    	width: 20%;
+    	height: 10%;
+    }
+    #diagnosis, #Stuff, #prescription
+    {
+    	width: 90%;
+    	height: 45%;
+    }
+    #hospital
+    {
+    	width: 40%;
+    	height: 20%;
+    }
+    #COVID-19
+    {
+    	width: 50%;
+    	height: 40%;
+    }
+    nav ul
+    {
+    	overflow: auto;
+    }
+    #Care
+    {
+    	width: 100%;
+    }
+    #yourself
+	{
+		width: 30%;
+		float: left;
+	}
+	#selfcare
+	{
+		width: 30%;
+		float: left;
+	}
+	#Care:after
+	{
+		clear: both;
+		content:"";
+		display: table;
+	}
+	aside, #contact-division 
+	{
+		padding: 18px 0;
+	}
+	#marquee
+	{
+		padding: 1em 0 2em 0;
+	}
+	#main_bar article
+	{
+		float: left;
+		width: 30%;
+		overflow: auto;
+		min-height: 850px;
+		padding: 0;
+		margin: 0;
+	}
+	#main_bar article:nth-child(3)
+	{
+		width: 40%;
+	}
+	#main_bar article p
+	{
+		font-size: 0.75em;
+	}
+	#main_bar:after
+	{
+		clear: both;
+		content:"";
+		display: table;
+	}
+
+}
+          
+/*
+-10 inch tablets
+-This CSS will apply for devices with the minimum width of 768 pixels
+*/
+@media only screen and (min-width: 768px)
+{
+	body 
+    {
+    	width: 80%;
+    }
+    #diagnosis, #Stuff, #prescription
+    {
+    	width: 8%;
+    	height: 45%;
+    }
+    #hospital
+    {
+    	width: 40%;
+    	height: 20%;
+    }
+    #COVID-19
+    {
+    	width: 40%;
+    	height: 20%;
+    }
+}
+          
+/*
+-Desktop computers
+-This CSS will apply for devices with the minimum width of 1140 pixels
+*/
+@media only screen and (min-width: 1140px) 
+{
+	body 
+    {
+    	width: 60%;
+    }
+    #diagnosis, #Stuff, #prescription
+    {
+    	width: 80%;
+    	height: 45%;
+    }
+    #hospital
+    {
+    	width: 40%;
+    	height: 20%;
+    }
+    #COVID-19
+    {
+    	width: 40%;
+    	height: 20%;
+    }
+}
+          
+/* @media end */

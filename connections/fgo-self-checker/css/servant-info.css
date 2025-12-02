@@ -1,0 +1,680 @@
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Global setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.servant-info-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.servant-info {
+    display: flex;
+    margin: 0 10px;
+    flex-direction: column;
+}
+
+.servant-content {
+    font-size: small;
+}
+
+[class $="-title"],
+[class $="-title flex-2"] {
+    background-color: lightgray;
+    text-align: center;
+}
+
+[class $="special"] {
+    background-color: slateblue;
+}
+
+.top-content .data-side>div,
+.middle-content>div {
+    line-height: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.top-content .data-side>div>*,
+.middle-content>div>* {
+    flex: 1;
+    text-align: center;
+    border: 2px solid olivedrab;
+}
+
+.top-content .data-side>div>.flex-2,
+div.flex-2 {
+    flex: 2 !important;
+}
+
+div.flex-3 {
+    flex: 3 !important;
+}
+
+div.flex-5 {
+    flex: 5 !important;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Global setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.servant-name {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.servant-name>.servant-name-left {
+    display: flex;
+    flex: 1;
+    text-align: center;
+}
+
+.servant-name>.servant-name-left>span.servant-no {
+    font-size: 24px;
+    font-weight: 800;
+    margin: auto auto;
+}
+
+.servant-name>.servant-name-middle {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.servant-name>.servant-name-middle>img {
+    margin: 0 auto;
+}
+
+.servant-name>.servant-name-middle>img.rare-level {
+    width: 103px;
+    height: auto;
+}
+
+.servant-name>.servant-name-middle>img.class-picture {
+    width: 72px;
+    height: auto;
+}
+
+.servant-name>.servant-name-right {
+    flex: 1;
+}
+
+.servant-name>.servant-name-right>span.get-type {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.servant-name>.servant-name-right>span.get-type>i {
+    display: flex;
+    flex: 1;
+    line-height: 150px;
+    font-size: 40px;
+}
+
+.servant-name>.servant-name-right>span.get-type>i.fa-store {
+    color: purple;
+}
+
+.servant-name>.servant-name-right>span.get-type>i.fa-check-double {
+    color: green;
+}
+
+.servant-name>.servant-name-right>span.get-type>i.fa-calendar {
+    color: red;
+}
+
+.servant-name>.servant-name-right>span.get-type>i.fa-gifts {
+    color: lightseagreen;
+}
+
+.servant-name.gold {
+    background: gold;
+}
+
+.servant-name.silver {
+    background: grey;
+}
+
+.servant-name.brown {
+    background: burlywood;
+}
+
+[class ^=".servant-name-placeholder"] {
+    font-size: 24px;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Top setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.top-content {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Left setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.flex-left {
+    width: 30%;
+    margin: 0 2.5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-left>.sairin-states {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-left>.sairin-states>* {
+    display: flex;
+    flex: 2;
+    text-align: center;
+    justify-content: center;
+}
+
+.flex-left>.sairin-states>i {
+    font-size: 32px;
+    flex: 1;
+    cursor: pointer;
+    color: gold;
+    padding: 0;
+}
+
+.flex-left>.sairin-states>i.disabled {
+    color: grey;
+    opacity: 0.3;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Right setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.flex-right {
+    width: 65%;
+}
+
+.character-picture {
+    width: 100%;
+    height: auto;
+    max-width: 512px;
+    max-height: 724px;
+}
+
+
+/* Command Card */
+
+.top-content .data-side .line-four {
+    line-height: 84px;
+}
+
+.line-four>.command-cards>.command-cards-inner-container {
+    max-width: min-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.command-cards-inner-container>.command-cards-img {
+    width: 48px;
+    height: 48px;
+    margin: 16px 0;
+    margin-right: 10px;
+}
+
+.command-cards-img:first-child {
+    margin-left: 10px;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Middle setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.middle-content {
+    margin-top: 12px;
+}
+
+.middle-content>.line-eight-content>.special-attributes-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-content>.line-eight-content>.special-attributes-container>.special-attributes {
+    width: 100%;
+    font-size: large;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Bottom setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.bottom-content {
+    margin-top: 12px;
+}
+
+.bottom-content>div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-content>div>div {
+    flex: 1;
+    text-align: center;
+    border: 2px solid peru;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Phantasm setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.phantasm-title {
+    background-color: coral;
+}
+
+[class $="-upper-bar"] {
+    margin-top: 20px;
+    display: flex;
+    line-height: 30px;
+}
+
+[class $="-upper-bar"]>div {
+    padding: 0 10px;
+    border-radius: 4px 4px 0 0;
+    background: #63b8ff !important;
+    color: #f8f8f8 !important;
+    margin-right: 5px;
+}
+
+[class $="-upper-bar"]>div.active {
+    color: #0645ad !important;
+    background-color: #f8f8f8 !important;
+    border: 1px solid #ccc !important;
+    border-bottom: 1px solid #f8f8f8 !important;
+}
+
+[id="phantasm-icon"] {
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+
+.phantasm-extra-effect-container,
+.phantasm-description-container,
+.phantasm-name-placeholder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+[class ^="phantasm-name-placeholder-"][class $="-title"] {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phantasm-name-placeholder-CN-title :first-child {
+    margin-top: 8px;
+    margin-bottom: 2px;
+}
+
+.phantasm-name-placeholder-CN-title :last-child {
+    margin-bottom: 8px;
+    margin-top: 2px;
+}
+
+.phantasm-name-placeholder-CN-title {
+    color: white;
+}
+
+.phantasm-name-placeholder-CN-title>span {
+    font-size: 20px;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(-90deg, #fcf7a1 0%, #fcf7a1 50%, #cca652 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.phantasm-name-placeholder-JP-title {
+    background: white;
+}
+
+.phantasm-name-placeholder-JP-title>span {
+    font-size: 100%;
+}
+
+.phantasm-icon.quick+.phantasm-name-placeholder>.phantasm-name-placeholder-CN-title {
+    background: repeating-linear-gradient(45deg, #01460a 0%, #01460a 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(-45deg, #01460a 0%, #01460a 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(45deg, rgba(10, 123, 28, .75) 0%, rgba(10, 123, 28, .75) 3%, rgba(6, 90, 21, .2) 0%, rgba(6, 90, 21, .2) 6%), repeating-linear-gradient(-45deg, rgba(10, 123, 28, .75) 0%, rgba(10, 123, 28, .75) 3%, rgba(6, 90, 21, .2) 0%, rgba(6, 90, 21, .2) 6%), repeating-linear-gradient(#0a7b1c, #065a15);
+}
+
+.phantasm-icon.arts+.phantasm-name-placeholder>.phantasm-name-placeholder-CN-title {
+    background: repeating-linear-gradient(45deg, #121f5d 0%, #121f5d 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(-45deg, #121f5d 0%, #121f5d 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(45deg, rgba(37, 56, 152, .75) 0%, rgba(37, 56, 152, .75) 3%, rgba(24, 36, 108, .2) 0%, rgba(24, 36, 108, .2) 6%), repeating-linear-gradient(-45deg, rgba(37, 56, 152, .75) 0%, rgba(37, 56, 152, .75) 3%, rgba(24, 36, 108, .2) 0%, rgba(24, 36, 108, .2) 6%), repeating-linear-gradient(#2a35a2, #18246c);
+}
+
+.phantasm-icon.buster+.phantasm-name-placeholder>.phantasm-name-placeholder-CN-title {
+    background: repeating-linear-gradient(45deg, #590f0c 0%, #590f0c 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(-45deg, #590f0c 0%, #590f0c 0.2%, rgba(0, 0, 0, 0) 0.2%, rgba(0, 0, 0, 0) 3%), repeating-linear-gradient(45deg, rgba(155, 47, 31, .75) 0%, rgba(155, 47, 31, .75) 3%, rgba(83, 24, 16, .2) 0%, rgba(83, 24, 16, .2) 6%), repeating-linear-gradient(-45deg, rgba(155, 47, 31, .75) 0%, rgba(155, 47, 31, .75) 3%, rgba(83, 24, 16, .2) 0%, rgba(83, 24, 16, .2) 6%), repeating-linear-gradient(#7a120c, #a71e16);
+}
+
+.bottom-content>.phantasm-content-1>div>span {
+    line-height: 24px;
+}
+
+.bottom-content>.phantasm-content-2>div[class $="-detail-row"]>div[class $="-description-container flex-5"]>.level-values>.value-span {
+    width: 20%;
+}
+
+.bottom-content>.phantasm-content-2>div[class $="-detail-row"]>div[class $="-description-container flex-5"]>.level-values>.value-span.only {
+    width: 100%;
+}
+
+
+/* Common for phantasm and skills */
+
+.bottom-content>div[class $="-content-2"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-content>div[class $="-content-2"]>div[class $="-detail-row"] {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-content>div[class $="-content-2"]>div[class $="-detail-row"]>div[class $="-extra-effect-container"] {
+    display: flex;
+    flex: 1;
+    border-right: 4px solid peru;
+    background: lightsteelblue;
+}
+
+.bottom-content>div[class $="-content-2"]>div[class $="-detail-row"]>div[class $="-extra-effect-container"]>img.effect-icon {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+.bottom-content>div[class $="-content-2"]>div[class $="-detail-row"]>div[class $="-description-container flex-5"] {
+    display: flex;
+    flex-direction: column;
+}
+
+span.description-span {
+    min-height: 24px;
+    line-height: 24px;
+    margin: 2px auto;
+    background: blanchedalmond;
+    width: 100%;
+}
+
+.level-values {
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.value-span {
+    text-align: center;
+    width: 10%;
+    border: 2px solid black;
+    height: 30px;
+    line-height: 28px;
+}
+
+.value-span:not(.only):first-child {
+    background: lightgreen;
+}
+
+.value-span:nth-child(6) {
+    background: orange;
+}
+
+.value-span:nth-child(10) {
+    background: red;
+}
+
+.level-values>.value-span.only {
+    width: 100%;
+    font-size: x-large;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Skill setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+.bottom-content>.skill-topic {
+    margin-top: 10px;
+}
+
+.bottom-content>.skill-topic>.skill-title {
+    background-color: goldenrod;
+}
+
+.bottom-content>[class ^="skill-"][class $="-content"],
+.bottom-content>[class ^="skill-"][class $="-content-2"] {
+    background: white;
+}
+
+div.demonstrating-icon.phantasm-icon,
+div.demonstrating-icon.skill-1-icon,
+div.demonstrating-icon.skill-2-icon,
+div.demonstrating-icon.skill-3-icon {
+    display: flex;
+    background: gold;
+}
+
+[id="skill-1-icon"],
+[id="skill-2-icon"],
+[id="skill-3-icon"] {
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}
+
+.bottom-content>div[class ^="skill-"][class $="-content"]>div[class ^="skill-"][class $="-name-placeholder flex-3"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-content>div[class ^="skill-"][class $="-content"]>div[class ^="skill-"][class $="-name-placeholder flex-3"]>span[class ^="skill-"][class $="-name-placeholder-CN"] {
+    background: lightgray;
+}
+
+.bottom-content>div[class ^="skill-"][class $="-content"]>div>span[class ^="skill-"][class $="-charge-time-placeholder"] {
+    line-height: 60px;
+}
+
+[class ^="skill-"][class $="-charge-time-placeholder"]>.fas.fa-long-arrow-alt-right {
+    padding: 0 10px;
+}
+
+[class ^="skill-"][class $="-charge-time-placeholder"]>span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+[class ^="skill-"][class $="-charge-time-placeholder"]>span.skill-level-1 {
+    padding-left: 10px;
+    color: green;
+}
+
+[class ^="skill-"][class $="-charge-time-placeholder"]>span.skill-level-6 {
+    color: orange;
+}
+
+[class ^="skill-"][class $="-charge-time-placeholder"]>span.skill-level-10 {
+    color: red;
+}
+
+.bottom-content>[class ^="skill-"][class $="-content"]>[class ^="skill-"][class $="-name-placeholder flex-5"],
+.bottom-content>[class ^="skill-"][class $="-content-2"]>[class ^="skill-"][class $="-extra-effect-container"],
+.bottom-content>[class ^="skill-"][class $="-content-2"]>[class ^="skill-"][class $="-description-container flex-5"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-content>[class ^="skill-"][class $="-content-2"]>[class ^="skill-"][class $="-extra-effect-container"]>img {
+    margin: 2px auto 24px auto;
+}
+
+div.servant-info>div.bottom-content>div:last-child {
+    margin-bottom: 30px;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Passive setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+div.passive-skill-topic {
+    margin-top: 10px;
+}
+
+div.passive-skill-topic>div.passive-skill-title {
+    background: mediumorchid;
+}
+
+div.passive-skill-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.passive-skill-container>div.passive-skill {
+    display: flex;
+    flex-direction: row;
+}
+
+div.passive-skill-container>div.passive-skill>div.left {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    border-right: 4px solid peru;
+}
+
+div.passive-skill-container>div.passive-skill>div.left>img.passive-skill-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+div.passive-skill-container>div.passive-skill>div.passive-discription {
+    display: flex;
+    flex-direction: column;
+}
+
+div.passive-skill-container>div.passive-skill>div.passive-discription>span.passive-skill-description-name {
+    background: lightgray;
+}
+
+
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ * Appended setting
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+div.appended-skill-topic {
+    margin-top: 10px;
+}
+
+div.appended-skill-topic>div.appended-skill-title {
+    background-color: lightsalmon;
+}
+
+div[class ^="appended-skill-"][class $="-content"]>div.appended-skill-icon {
+    display: flex;
+}
+
+div[class ^="appended-skill-"][class $="-content"]>div.appended-skill-icon>img[id ^="appended-skill-"][id $="-icon"] {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: auto;
+}
+
+div.passive-skill-description-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="-name-placeholder"] {
+    display: flex;
+    flex-direction: column;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="-name-placeholder"]>span[class ^="appended-skill-"][class $="-name-placeholder-CN"] {
+    background: lightgray;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="description-container"] {
+    border-top: 5px black solid;
+    display: flex;
+    flex-direction: column;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="description-container"]>span[class ^="appended-skill-"][class $="-description"] {
+    height: 24px;
+    line-height: 24px;
+    margin: 2px auto;
+    background: blanchedalmond;
+    width: 100%;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="description-container"]>div.appended-skill-data-table {
+    width: 100%;
+    display: flex;
+}
+
+div.passive-skill-description-container>div[class ^="appended-skill-"][class $="description-container"]>div.appended-skill-data-table>span.fixed-value-span {
+    text-align: center;
+    width: 10%;
+    border: 2px solid black;
+}
