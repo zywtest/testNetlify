@@ -1,0 +1,52 @@
+/* Main column */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.image-container {
+  height:200px;
+}
+
+.personal-profile {
+  height: 150px;
+  width: 200px;
+}
+
+img.demo-images {
+  max-width: 100%;
+}
+
+div.topic-container {
+  display: flex;
+  flex-direction: column;
+  border: 20px groove #ffd700;
+  background-image: linear-gradient(
+    0deg,
+    rgba(247, 247, 247, 1) 23.8%,
+    rgba(252, 221, 221, 1) 92%
+  );
+}
+
+div.topic-container ~ div.topic-container {
+  margin-top: 10px;
+}
+
+div[id="personal-proj"] > div.topic-container:nth-child(2n) {
+  border-color: darkviolet;
+  border-style: inset;
+}
+
+div[id="personal-proj"] > div.topic-container:nth-child(3n) {
+  border-color: lightgreen;
+  border-style: ridge;
+}
+
+div.topic-container > * {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
