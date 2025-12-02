@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ziyu's Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <script src="./index.js"></script>
+    <script src="./js/lib/angular/angular.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <div class="music-container" id="music-container">
+        <div class="music-info">
+          <div class="music-info-labels">
+            <h5 id="currTime"></h5>
+            <h3 id="title"></h4>
+            <h5 id="durTime"></h5>
+          </div>
+          <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+        <audio src="none" id="audio"></audio>
+        <div class="left">
+          <div class="img-container">
+            <img src="Source/icon/me.jpg" alt="music-cover" id="cover" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="upper-navigation">
+            <button id="prev" class="action-btn">
+              <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+              <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+              <i class="fas fa-forward"></i>
+            </button>
+          </div>
+          <div class="bottom-navigation">
+            <button id="single" class="action-btn">
+              <i class="fas fa-ban"></i>
+            </button>
+            <button id="queue" class="action-btn">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+            <button id="repeat" class="action-btn">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+            <button id="random" class="action-btn">
+              <i class="fas fa-random"></i>
+            </button>
+          </div>
+        </div>
+        <div class="tools">
+          <div id="change-color-theme" class="tool-btn">
+            <i class="fas fa-tshirt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+    <div class="header">
+      <h1>Welcome to Ziyu's Website</h1>
+    </div>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+      <div class="side">
+        <h2>About Me</h2>
+        <h5>Photo of me:</h5>
+        <div class="image-container">
+          <img src="Source/icon/me.jpg" class="personal-profile">
+        </div>
+        <p></p>
+        <h3>More Info</h3>
+        <h3>Degree:</h3>
+        <h5>Bachelor of Science, double major in Computer Science and Statistics 2017-2020</h5>
+      </div>
+      <div id="main" class="main">
+        <h2>Personal HTML Project</h2>
+        <div id="personal-proj"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <h2></h2>
+    </div>
+  </body>
+</html>
